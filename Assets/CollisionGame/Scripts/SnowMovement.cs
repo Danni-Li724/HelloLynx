@@ -34,7 +34,8 @@ public class SnowMovement : MonoBehaviour
         {
             hasCollided = true;
             Debug.Log($"Snow collided with: {other.name} [{tag}]");
-            CollisionManager.Instance.RegisterCollision();
+            if (CollisionManager.Instance != null)
+                CollisionManager.Instance.RegisterCollision(transform.position);
             StartCoroutine(DestroyAfterDelay());
         }
     }

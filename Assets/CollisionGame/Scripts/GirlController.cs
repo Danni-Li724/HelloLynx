@@ -54,7 +54,9 @@ public class GirlController : MonoBehaviour
         {
             if (CollisionManager.Instance != null)
             {
-                CollisionManager.Instance.RegisterCollision();
+                if (CollisionManager.Instance != null)
+                    CollisionManager.Instance.RegisterCollision(transform.position);
+
             }
         }
         
