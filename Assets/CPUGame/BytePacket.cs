@@ -82,41 +82,31 @@ public class BytePacket : MonoBehaviour
             return;
 
         Debug.Log($"TryAllocate called at position: {transform.position}");
-
-        // Use layer filtering to only detect RAMSlots (adjust layer name as needed)
+        // Collider2D[] hits = Physics2D.OverlapPointAll(transform.position, slotLayer); 
         Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
-        
+
+        bool foundMatchingSlot = false;
+
         foreach (Collider2D hit in hits)
         {
-            // Skip self-collision
             if (hit.gameObject == this.gameObject)
                 continue;
-                
-            Debug.Log($"Hit collider: {hit.gameObject.name}");
+
             RAMSlot slot = hit.GetComponent<RAMSlot>();
             if (slot != null)
             {
                 Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {slot.slotAddress}");
-                
+
                 if (slot.slotAddress == targetAddress.ToLower())
                 {
-                    // Mark as allocated to prevent further interaction
                     isAllocated = true;
-                    
-                    // Stop dragging
                     isDragging = false;
-                    
-                    // Notify game manager
+
                     CPUGameManager.Instance.RegisterCorrectAllocation(this);
-                    
-                    // Start destruction coroutine
                     StartCoroutine(DestroyAfterDelay(0.3f));
-                    return;
-                }
-                else
-                {
-                    CPUGameManager.Instance.RegisterIncorrectAllocation();
-                    return;
+
+                    foundMatchingSlot = true;
+                    break; // correct one, stop searching
                 }
             }
             else
@@ -124,8 +114,12 @@ public class BytePacket : MonoBehaviour
                 Debug.Log($"Hit object has no RAMSlot component: {hit.gameObject.name}");
             }
         }
-        
-        Debug.Log("No valid RAMSlot found");
+
+        if (!foundMatchingSlot)
+        {
+            Debug.Log("No valid matching RAMSlot found for allocation.");
+            CPUGameManager.Instance.RegisterIncorrectAllocation();
+        }
     }
 
     private IEnumerator DestroyAfterDelay(float delay)
