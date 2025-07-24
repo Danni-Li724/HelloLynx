@@ -8,7 +8,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject contentParent;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [SerializeField] private Button submitButton;
+    //[SerializeField] private Button submitButton;
     //[SerializeField] private GameObject dialoguePanel;
 
     private void Awake()
@@ -52,28 +52,6 @@ public class DialogueUI : MonoBehaviour
     private void ResetPanel()
     {
         dialogueText.text = "";
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void MikeyTest()
-    {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("mikeyIntroduction");
-    }
-
-    public void SuzyTest()
-    {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("suzyIntroduction");
     }
 
     public void SubmitPressed()
