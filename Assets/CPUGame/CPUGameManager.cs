@@ -117,11 +117,9 @@ public class CPUGameManager : MonoBehaviour
     public void RegisterCorrectAllocation(BytePacket packet)
     {
         Debug.Log($"[RegisterCorrectAllocation] Correct allocation for address: {packet.targetAddress}");
-
         // +1 to score and update UI
         score++;
         scoreText.text = "Score: " + score;
-
         // Remove the byte from the queue
         trackQueue = new Queue<GameObject>(trackQueue.Where(x => x != packet.gameObject));
     }

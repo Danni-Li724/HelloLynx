@@ -16,6 +16,8 @@ public class BytePacket : MonoBehaviour
     private Camera cam;
     private Collider2D myCollider;
 
+    private RAMSlot touchedSlot;
+
     private void Start()
     {
         cam = Camera.main;
@@ -80,34 +82,51 @@ public class BytePacket : MonoBehaviour
     {
         if (isAllocated)
             return;
-
+    
         Debug.Log($"TryAllocate called at position: {transform.position}");
         // Collider2D[] hits = Physics2D.OverlapPointAll(transform.position, slotLayer); 
         Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
-
+    
         bool foundMatchingSlot = false;
-
+    
         foreach (Collider2D hit in hits)
         {
             if (hit.gameObject == this.gameObject)
                 continue;
-
-            RAMSlot slot = hit.GetComponent<RAMSlot>();
-            if (slot != null)
+    
+            //RAMSlot slot = hit.GetComponent<RAMSlot>();
+            if (touchedSlot != null)
             {
-                Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {slot.slotAddress}");
-
-                if (slot.slotAddress == targetAddress.ToLower())
+                if (touchedSlot.slotAddress == targetAddress.ToLower())
                 {
                     isAllocated = true;
                     isDragging = false;
-
                     CPUGameManager.Instance.RegisterCorrectAllocation(this);
+                    touchedSlot.HighlightWhenMatched();
                     StartCoroutine(DestroyAfterDelay(0.3f));
-
-                    foundMatchingSlot = true;
-                    break; // correct one, stop searching
                 }
+                else
+                {
+                    CPUGameManager.Instance.RegisterIncorrectAllocation();
+                }
+                // isAllocated = true;
+                // isDragging = false;
+                // Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {slot.slotAddress}");
+                //
+                // if (slot.slotAddress == targetAddress.ToLower())
+                // {
+                //     CPUGameManager.Instance.RegisterCorrectAllocation(this);
+                //     //StartCoroutine(DestroyAfterDelay(0.3f));
+                //     slot.HighlightWhenMatched();
+                //     //foundMatchingSlot = true;
+                // }
+                // else
+                // {
+                //     CPUGameManager.Instance.RegisterIncorrectAllocation();
+                //     slot.HighlightWhenMatched();
+                // }
+                // StartCoroutine(DestroyAfterDelay(0.3f));
+                // break;
             }
             else
             {
@@ -144,6 +163,22 @@ public class BytePacket : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.color = Color.green;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var slot = other.GetComponent<RAMSlot>();
+        if (slot != null)
+        {
+            touchedSlot = slot;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        var slot = other.GetComponent<RAMSlot>();
+        if (slot != null)
+        {
+            touchedSlot = null;
         }
     }
 }
