@@ -78,65 +78,96 @@ public class BytePacket : MonoBehaviour
         }
     }
 
+    // private void TryAllocate()
+    // {
+    //     if (isAllocated)
+    //         return;
+    //
+    //     Debug.Log($"TryAllocate called at position: {transform.position}");
+    //
+    //     // Use the touchedSlot from trigger detection
+    //     if (touchedSlot != null)
+    //     {
+    //         isAllocated = true;
+    //         isDragging = false;
+    //     
+    //         Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {touchedSlot.slotAddress}");
+    //
+    //         if (touchedSlot.slotAddress == targetAddress.ToLower())
+    //         {
+    //             CPUGameManager.Instance.RegisterCorrectAllocation(this);
+    //             touchedSlot.HighlightWhenMatched();
+    //         }
+    //         else
+    //         {
+    //             CPUGameManager.Instance.RegisterIncorrectAllocation();
+    //             touchedSlot.HighlightWhenIncorrect();
+    //         }
+    //     
+    //         StartCoroutine(DestroyAfterDelay(0.3f));
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("No RAMSlot touched - dropped in empty space");
+    //         CPUGameManager.Instance.RegisterIncorrectAllocation();
+    //     }
+    // }
+    
     private void TryAllocate()
     {
         if (isAllocated)
             return;
-    
         Debug.Log($"TryAllocate called at position: {transform.position}");
-        // Collider2D[] hits = Physics2D.OverlapPointAll(transform.position, slotLayer); 
+        // get all colliders at the drop position
         Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
-    
-        bool foundMatchingSlot = false;
+        Debug.Log($"Found {hits.Length} colliders at drop position");
+        // find the closest RAMSlot to our drop position
+        RAMSlot closestSlot = null;
+        float closestDistance = float.MaxValue;
     
         foreach (Collider2D hit in hits)
         {
             if (hit.gameObject == this.gameObject)
                 continue;
-    
-            //RAMSlot slot = hit.GetComponent<RAMSlot>();
-            if (touchedSlot != null)
+            
+            RAMSlot slot = hit.GetComponent<RAMSlot>();
+            if (slot != null)
             {
-                if (touchedSlot.slotAddress == targetAddress.ToLower())
+                // find distance between drop position and slot center
+                float distance = Vector2.Distance(transform.position, hit.transform.position);
+                Debug.Log($"Found slot {slot.slotAddress} at distance {distance}");
+            
+                if (distance < closestDistance)
                 {
-                    isAllocated = true;
-                    isDragging = false;
-                    CPUGameManager.Instance.RegisterCorrectAllocation(this);
-                    touchedSlot.HighlightWhenMatched();
-                    StartCoroutine(DestroyAfterDelay(0.3f));
+                    closestDistance = distance;
+                    closestSlot = slot;
                 }
-                else
-                {
-                    CPUGameManager.Instance.RegisterIncorrectAllocation();
-                }
-                // isAllocated = true;
-                // isDragging = false;
-                // Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {slot.slotAddress}");
-                //
-                // if (slot.slotAddress == targetAddress.ToLower())
-                // {
-                //     CPUGameManager.Instance.RegisterCorrectAllocation(this);
-                //     //StartCoroutine(DestroyAfterDelay(0.3f));
-                //     slot.HighlightWhenMatched();
-                //     //foundMatchingSlot = true;
-                // }
-                // else
-                // {
-                //     CPUGameManager.Instance.RegisterIncorrectAllocation();
-                //     slot.HighlightWhenMatched();
-                // }
-                // StartCoroutine(DestroyAfterDelay(0.3f));
-                // break;
+            }
+        }
+    
+        if (closestSlot != null)
+        {
+            isAllocated = true;
+            isDragging = false;
+        
+            Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Closest Slot: {closestSlot.slotAddress}");
+
+            if (closestSlot.slotAddress == targetAddress.ToLower())
+            {
+                CPUGameManager.Instance.RegisterCorrectAllocation(this);
+                closestSlot.HighlightWhenMatched();
             }
             else
             {
-                Debug.Log($"Hit object has no RAMSlot component: {hit.gameObject.name}");
+                CPUGameManager.Instance.RegisterIncorrectAllocation();
+                closestSlot.HighlightWhenIncorrect();
             }
+        
+            StartCoroutine(DestroyAfterDelay(0.3f));
         }
-
-        if (!foundMatchingSlot)
+        else
         {
-            Debug.Log("No valid matching RAMSlot found for allocation.");
+            Debug.Log("No RAMSlot found - dropped in empty space");
             CPUGameManager.Instance.RegisterIncorrectAllocation();
         }
     }
