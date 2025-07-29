@@ -46,5 +46,8 @@ TagManager:
   - name: WorldUI
     uniqueID: 520437229
     locked: 0
+  - name: Byte
+    uniqueID: 135114467
+    locked: 0
   m_RenderingLayers:
   - Default

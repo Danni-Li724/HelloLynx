@@ -52,7 +52,6 @@ public class CPUGameManager : MonoBehaviour
 
         // Create a new byte at the spawn point
         GameObject byteObj = Instantiate(bytePrefab, spawnPoint.position, Quaternion.identity);
-
         // Give it its target address and tracking target
         BytePacket packet = byteObj.GetComponent<BytePacket>();
         packet.targetAddress = address;

@@ -49,13 +49,30 @@ public class BytePacket : MonoBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Collider2D hit = Physics2D.OverlapPoint(mouseWorldPos);
-            if (hit != null && hit.gameObject == this.gameObject)
+            Collider2D[] hits = Physics2D.OverlapPointAll(mouseWorldPos);
+            BytePacket topPacket = null;
+            int highestOrder = int.MinValue;
+            foreach (Collider2D hit in hits)
+            {
+                BytePacket packet = hit.GetComponent<BytePacket>();
+                if (packet == null || packet.isAllocated) continue;
+
+                int sortingOrder = 0;
+                var sr = hit.GetComponent<SpriteRenderer>();
+                if (sr != null) sortingOrder = sr.sortingOrder;
+                // get highest sorting order
+                if (topPacket == null || sortingOrder > highestOrder)
+                {
+                    topPacket = packet;
+                    highestOrder = sortingOrder;
+                }
+            }
+
+            if (topPacket == this)
             {
                 isDragging = true;
                 dragOffset = transform.position - (Vector3)mouseWorldPos;
-                
-                // Disable collider during drag to prevent self-collision
+
                 if (myCollider != null)
                     myCollider.enabled = false;
             }
@@ -65,7 +82,7 @@ public class BytePacket : MonoBehaviour
         {
             transform.position = (Vector3)mouseWorldPos + dragOffset;
         }
-
+        // drop
         if (Mouse.current.leftButton.wasReleasedThisFrame && isDragging)
         {
             isDragging = false;
