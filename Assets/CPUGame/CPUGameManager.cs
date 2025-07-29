@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Analytics;
+using Random = UnityEngine.Random;
 
 public class CPUGameManager : MonoBehaviour
 {
@@ -25,23 +28,78 @@ public class CPUGameManager : MonoBehaviour
     private float hogTimer = 0f;  // Countdown before punishing the player
     private const float HOG_DURATION = 5f; // How long a byte can hog the line before it's a problem
 
+    [Header("Timer Settings")] 
+    public float totalGameTime = 60f;
+    public Text timerText;
+    public float minSpawnInterval = 0.6f;
+    public float frequencyRampTime = 40f;
+    private float timeLeft;
+    private bool gameEnded = false;
+    
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        timeLeft = totalGameTime;
+        UpdateTimerUI();
+    }
     private void Update()
     {
+        if (gameEnded) return;
+        timeLeft -= Time.deltaTime;
+        if(timeLeft < 0) timeLeft = 0f;
+        UpdateTimerUI();
+        
+        float t = 1 - Mathf.Clamp01(timeLeft / frequencyRampTime);
+        float currentSpawnInterval = Mathf.Lerp(minSpawnInterval, t, frequencyRampTime * t);
+        
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
             SpawnByte();
             spawnTimer = 0;
         }
-
         // Check if a byte is stuck past the red line
         CheckTrackHog();
+
+        if (timeLeft <= 0)
+        {
+            EndGame(true);
+        }
+    }
+
+    private void UpdateTimerUI()
+    {
+        if (timerText != null)
+        {
+            timerText.text = "Time: " + timeLeft.ToString("0.0");
+        }
+    }
+
+    private void EndGame(bool timerExpired)
+    {
+        gameEnded = true;
+        if (timerExpired)
+        {
+            if (mistakes < maxMistakes)
+            {
+                warningText.text = "You Win!";
+            }
+            else
+            {
+                warningText.text = "GameOver!";
+            }
+        }
+        else
+        {
+            warningText.text = "GameOver";
+        }
+
+        Time.timeScale = 0;
     }
 
     void SpawnByte()
@@ -55,8 +113,10 @@ public class CPUGameManager : MonoBehaviour
         // Give it its target address and tracking target
         BytePacket packet = byteObj.GetComponent<BytePacket>();
         packet.targetAddress = address;
-        packet.trackTarget = trackTargets[Random.Range(0, trackTargets.Length)];
-
+        //packet.trackTarget = trackTargets[Random.Range(0, trackTargets.Length)];
+        packet.waypoints = new Transform[] { trackTargets[0], trackTargets[1] };
+        packet.currentWaypointIndex = 0;
+        packet.movingForward = true;
         Debug.Log($"[SpawnByte] BytePacket targetAddress set to: {packet.targetAddress}");
 
         // Keep track of the byte so we can monitor it

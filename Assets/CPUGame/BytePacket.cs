@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class BytePacket : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class BytePacket : MonoBehaviour
     private Collider2D myCollider;
 
     private RAMSlot touchedSlot;
+    
+    [Header("Navigation")]
+    public Transform[] waypoints;
+    public int currentWaypointIndex = 0;
+    public bool movingForward = true;
 
     private void Start()
     {
@@ -31,12 +37,36 @@ public class BytePacket : MonoBehaviour
         // Don't update if already allocated
         if (isAllocated)
             return;
-
-        if (!isDragging && trackTarget != null)
+        if (!isDragging && waypoints != null && waypoints.Length > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, trackTarget.position, speed * Time.deltaTime);
+            Transform target = waypoints[currentWaypointIndex];
+            transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
+            if (Vector3.Distance(transform.position, target.position) < 0.5f)
+            {
+                // if we want to loop waypoints?
+                // if (movingForward)
+                // {
+                //     currentWaypointIndex++;
+                //     if (currentWaypointIndex >= waypoints.Length)
+                //     {
+                //         currentWaypointIndex = waypoints.Length - 2;
+                //         movingForward = true;
+                //     }
+                // }
+                // else
+                // {
+                //     currentWaypointIndex--;
+                //     if (currentWaypointIndex < 0)
+                //     {
+                //         currentWaypointIndex = 1;
+                //         movingForward = true;
+                //     }
+                // }
+                currentWaypointIndex++;
+                if(currentWaypointIndex >= waypoints.Length)
+                    currentWaypointIndex = waypoints.Length;
+            }
         }
-
         HandleDragInput();
     }
 
@@ -94,41 +124,6 @@ public class BytePacket : MonoBehaviour
             TryAllocate();
         }
     }
-
-    // private void TryAllocate()
-    // {
-    //     if (isAllocated)
-    //         return;
-    //
-    //     Debug.Log($"TryAllocate called at position: {transform.position}");
-    //
-    //     // Use the touchedSlot from trigger detection
-    //     if (touchedSlot != null)
-    //     {
-    //         isAllocated = true;
-    //         isDragging = false;
-    //     
-    //         Debug.Log($"[Allocation] Byte Target: {targetAddress.ToLower()} vs Slot Address: {touchedSlot.slotAddress}");
-    //
-    //         if (touchedSlot.slotAddress == targetAddress.ToLower())
-    //         {
-    //             CPUGameManager.Instance.RegisterCorrectAllocation(this);
-    //             touchedSlot.HighlightWhenMatched();
-    //         }
-    //         else
-    //         {
-    //             CPUGameManager.Instance.RegisterIncorrectAllocation();
-    //             touchedSlot.HighlightWhenIncorrect();
-    //         }
-    //     
-    //         StartCoroutine(DestroyAfterDelay(0.3f));
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("No RAMSlot touched - dropped in empty space");
-    //         CPUGameManager.Instance.RegisterIncorrectAllocation();
-    //     }
-    // }
     
     private void TryAllocate()
     {
