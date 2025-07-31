@@ -56,8 +56,6 @@ public class DialogueUI : MonoBehaviour
 
     public void SubmitPressed()
     {
-        Debug.Log("Submit Pressed");
-
         GameEventsManager.instance.dialogueEvents.SubmitPressed();
     }
 }
