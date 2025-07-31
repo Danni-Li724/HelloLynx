@@ -8,17 +8,13 @@ public class BadgeUI : MonoBehaviour
    public Button badgeButton;
    public Transform badgeListParent;
    public GameObject badgeIconPrefab;
-
+   public BadgeSpriteLibrary badgeSpriteLibrary; 
    private void Start()
    {
       badgePanel.SetActive(false);
       badgeButton.onClick.AddListener(OpenBadgePanel);
       BadgeInventory.Instance.OnBadgeEarned += BadgeEarnedEffect;
-   }
-
-   void BadgeEarnedEffect(BadgeType badge)
-   {
-      badgeButton.transform.DOPunchScale(Vector2.one * 0.2f, 0.5f, 10, 1);
+      RefreshBadgeList();
    }
 
    void OpenBadgePanel()
@@ -31,13 +27,20 @@ public class BadgeUI : MonoBehaviour
    void RefreshBadgeList()
    {
       foreach (Transform t in badgeListParent)
-      {
          Destroy(t.gameObject);
-      }
+
       foreach (var badge in BadgeInventory.Instance.GetBadges())
       {
          var icon = Instantiate(badgeIconPrefab, badgeListParent);
-         icon.GetComponentInChildren<Text>().text = badge.ToString(); // displaying name
+         var image = icon.GetComponentInChildren<Image>();
+         var text = icon.GetComponentInChildren<Text>();
+         if (image) image.sprite = badgeSpriteLibrary.GetSprite(badge);
+         if (text) text.text = badge.ToString();
       }
    }
+   void BadgeEarnedEffect(BadgeType badge)
+   {
+      badgeButton.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f, 10, 1);
+   }
 }
+

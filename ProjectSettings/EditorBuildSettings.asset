@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CollisionMinigame.unity
+    path: Assets/Scenes/Motherboard.unity
+    guid: 77a6c7e0f029c5d47a0fb359adfd855f
+  - enabled: 1
+    path: Assets/Scenes/Suzy.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Mikey.unity
+    guid: 144941e5331ed3443a042005f03bab7e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

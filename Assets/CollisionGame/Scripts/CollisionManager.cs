@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class CollisionManager : MonoBehaviour
 {
     public static CollisionManager Instance;
-
+    
     public int collisionCount = 0;
     public int successfulReactions = 0;
 
@@ -17,6 +17,7 @@ public class CollisionManager : MonoBehaviour
     public float inputWindow = 1f;
 
     private List<CollisionEvent> collisionEvents = new List<CollisionEvent>();
+    private bool gameActive = false;
 
     [System.Serializable]
     private class CollisionEvent
@@ -32,11 +33,30 @@ public class CollisionManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+        enabled = false;
+    }
+    
+    public void BeginMinigame()
+    {
+        collisionCount = 0;
+        successfulReactions = 0;
+        collisionText.text = $"Collisions: {collisionCount}";
+        scoreText.text = $"Score: {successfulReactions}";
+        collisionEvents.Clear();
+        gameActive = true;
+        enabled = true; 
+    }
+    
+    public void ResetMinigame()
+    {
+        BeginMinigame();
     }
 
     private void Update()
     {
+        if (!gameActive) return;
         // Remove expired collision events
+        
         for (int i = collisionEvents.Count - 1; i >= 0; i--)
         {
             if (!collisionEvents[i].reacted && Time.time - collisionEvents[i].time > inputWindow)
@@ -81,5 +101,15 @@ public class CollisionManager : MonoBehaviour
     public bool PlayerWon()
     {
         return collisionCount > 0 && ((float)successfulReactions / collisionCount >= 0.6f);
+    }
+    
+    public void FinishMinigame()
+    {
+        gameActive = false;
+        enabled = false;
+
+        bool won = PlayerWon();
+        // Notify controller
+        FindObjectOfType<MinigameController>().OnMinigameComplete(won);
     }
 }

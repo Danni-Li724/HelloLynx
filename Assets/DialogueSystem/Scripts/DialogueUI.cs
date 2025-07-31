@@ -12,6 +12,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject contentParent;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private DialogueChoiceButton[] choiceButtons;
+    public GameObject startMinigameButton;
 
     //[SerializeField] private Button submitButton;
     //[SerializeField] private GameObject dialoguePanel;
@@ -47,6 +48,8 @@ public class DialogueUI : MonoBehaviour
 
         //reset dialogue text
         ResetPanel();
+        if (startMinigameButton != null)
+            startMinigameButton.SetActive(true);
     }
 
     private void DisplayDialogue(string dialogueLine, List<Ink.Runtime.Choice> dialogueChoices)
@@ -95,6 +98,11 @@ public class DialogueUI : MonoBehaviour
     {
         GameEventsManager.instance.dialogueEvents.SubmitPressed();
     }
-
+    
+    public void OnStartMinigamePressed()
+    {
+        startMinigameButton.SetActive(false);
+        FindObjectOfType<MinigameController>().StartMinigame();
+    }
 
 }

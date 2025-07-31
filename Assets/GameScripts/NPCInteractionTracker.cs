@@ -6,29 +6,31 @@ public class NPCInteractionTracker : MonoBehaviour
 {
     public static NPCInteractionTracker Instance { get; private set; }
     private HashSet<string> talkedToNpcs = new HashSet<string>();
+    private string upcomingNpc;
     
     // events for jamie
     public event Action<string> OnNpcTalkedTo;
-    public event Action<string> ONNpcFirstTime;
 
     void Awake()
     {
-        if(Instance && Instance != this) Destroy(gameObject);
-        else
-        {
+        if (Instance && Instance != this) Destroy(gameObject);
+        else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
 
-    public void TalkTo(string npcId)
+    public void SetUpcomingNPC(string npcId)
     {
-        bool firstTime = talkedToNpcs.Add(npcId);
-        OnNpcTalkedTo?.Invoke(npcId);
-        if(firstTime)
-            ONNpcFirstTime?.Invoke(npcId);
+        upcomingNpc = npcId;
     }
-    
+    public string GetUpcomingNPC() => upcomingNpc;
+
+    public void RegisterTalkedTo(string npcId)
+    {
+        if (talkedToNpcs.Add(npcId))
+            OnNpcTalkedTo?.Invoke(npcId);
+    }
     public bool HasTalkedTo(string npcId) => talkedToNpcs.Contains(npcId);
 }
 

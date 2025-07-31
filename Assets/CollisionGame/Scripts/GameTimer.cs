@@ -9,14 +9,17 @@ public class GameTimer : MonoBehaviour
 
     private float elapsedTime = 0f;
     private bool gameEnded = false;
+    private bool gameActive = false;
+
+    public System.Action OnTimerEnd; // Callback for MinigameController
 
     void Update()
     {
-        if (gameEnded) return;
+        if (!gameActive || gameEnded) return;
 
         elapsedTime += Time.deltaTime;
         float remaining = Mathf.Clamp(gameDuration - elapsedTime, 0, gameDuration);
-        timerText.text = $"Time: {remaining:F1}s";
+        if (timerText) timerText.text = $"Time: {remaining:F1}s";
 
         if (elapsedTime >= gameDuration)
         {
@@ -24,18 +27,36 @@ public class GameTimer : MonoBehaviour
         }
     }
 
+    public void StartTimer()
+    {
+        elapsedTime = 0f;
+        gameEnded = false;
+        gameActive = true;
+        if (timerText) timerText.text = $"Time: {gameDuration:F1}s";
+        if (resultText) resultText.text = "";
+    }
+
+    public void StopTimer()
+    {
+        gameActive = false;
+    }
+
     void EndGame()
     {
         gameEnded = true;
+        gameActive = false;
 
-        if (CollisionManager.Instance.PlayerWon())
-        {
-            resultText.text = "You Win!";
-        }
-        else
-        {
-            resultText.text = "You Lose!";
-        }
+        if (OnTimerEnd != null)
+            OnTimerEnd.Invoke();
+    }
+
+    public void ResetTimer()
+    {
+        elapsedTime = 0f;
+        gameEnded = false;
+        gameActive = false;
+        if (timerText) timerText.text = $"Time: {gameDuration:F1}s";
+        if (resultText) resultText.text = "";
     }
 }
 
