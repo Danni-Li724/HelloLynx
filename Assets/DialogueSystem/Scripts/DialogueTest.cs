@@ -9,6 +9,6 @@ public class DialogueTest : MonoBehaviour
 
     public void SuzyTestPressed()
     {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("suzyIntroduction");
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("suzyDialogue.FirstIntroduction");
     }
 }
