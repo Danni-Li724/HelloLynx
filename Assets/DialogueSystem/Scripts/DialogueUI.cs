@@ -22,7 +22,7 @@ public class DialogueUI : MonoBehaviour
         ResetPanel();
     }
 
-    private void OnEnable()
+    private void Start()
     {
         GameEventsManager.instance.dialogueEvents.onDialogueStarted += DialogueStarted;
         GameEventsManager.instance.dialogueEvents.onDialogueFinished += DialogueFinished;

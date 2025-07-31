@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         inkExternalFunctions.Unbind(story);
     }
 
-    private void OnEnable()
+    private void Start()
     {
         GameEventsManager.instance.dialogueEvents.onEnterDialogue += EnterDialogue;
         GameEventsManager.instance.dialogueEvents.onSubmitPressed += SubmitPressed;
