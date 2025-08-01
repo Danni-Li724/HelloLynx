@@ -107,9 +107,8 @@ public class CollisionManager : MonoBehaviour
     {
         gameActive = false;
         enabled = false;
-
         bool won = PlayerWon();
         // Notify controller
-        FindObjectOfType<MinigameController>().OnMinigameComplete(won);
+        FindObjectOfType<MinigameControllerBase>().OnMinigameComplete(won);
     }
 }

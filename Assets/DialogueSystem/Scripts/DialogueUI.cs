@@ -102,7 +102,7 @@ public class DialogueUI : MonoBehaviour
     public void OnStartMinigamePressed()
     {
         startMinigameButton.SetActive(false);
-        FindObjectOfType<MinigameController>().StartMinigame();
+        FindObjectOfType<MinigameControllerBase>().StartMinigame();
     }
 
 }

@@ -27,6 +27,8 @@ public class CPUGameManager : MonoBehaviour
     private bool hogged = false;  // if something is sitting over the red line
     private float hogTimer = 0f;  // Countdown before punishing the player
     private const float HOG_DURATION = 5f; // How long a byte can hog the line before it's a problem
+    
+    private Action<bool> onGameOverCallback;
 
     [Header("Timer Settings")] 
     public float totalGameTime = 60f;
@@ -66,9 +68,16 @@ public class CPUGameManager : MonoBehaviour
         // Check if a byte is stuck past the red line
         CheckTrackHog();
 
-        if (timeLeft <= 0)
+        if (mistakes >= maxMistakes && !gameEnded)
         {
-            EndGame(true);
+            EndGame(timerExpired: false); // Lose due to mistakes
+            return; // Make sure timer win doesn't also fire
+        }
+
+        // win or Lose by timer ---
+        if (timeLeft <= 0 && !gameEnded)
+        {
+            EndGame(timerExpired: true);
         }
     }
 
@@ -79,27 +88,58 @@ public class CPUGameManager : MonoBehaviour
             timerText.text = "Time: " + timeLeft.ToString("0.0");
         }
     }
+    
+    public void BeginMinigame(Action<bool> onGameOver)
+    {
+        // Reset game state and assign callback
+        onGameOverCallback = onGameOver;
+        score = 0;
+        mistakes = 0;
+        timeLeft = totalGameTime;
+        gameEnded = false;
+        spawnTimer = 0f;
+        hogged = false;
+        hogTimer = 0f;
+        // Destroy all bytes from last round
+        foreach (var obj in trackQueue) { if (obj) Destroy(obj); }
+        trackQueue.Clear();
+        Time.timeScale = 1f; // Unpause game
+
+        // UI
+        if (scoreText) scoreText.text = "Score: 0";
+        if (warningText) warningText.text = "";
+        if (timerText) timerText.text = $"Time: {timeLeft:0.0}";
+
+        enabled = true; // Enable Update loop for timer
+    }
+
+    // --- Call this to retry the minigame ---
+    public void ResetMinigame()
+    {
+        BeginMinigame(onGameOverCallback);
+    }
 
     private void EndGame(bool timerExpired)
     {
         gameEnded = true;
+        enabled = false;
+
+        bool playerWon = false;
         if (timerExpired)
         {
-            if (mistakes < maxMistakes)
-            {
-                warningText.text = "You Win!";
-            }
-            else
-            {
-                warningText.text = "GameOver!";
-            }
+            playerWon = mistakes < maxMistakes;
+            if (warningText)
+                warningText.text = playerWon ? "You Win!" : "Game Over!";
         }
         else
         {
-            warningText.text = "GameOver";
+            playerWon = false;
+            if (warningText) warningText.text = "Game Over!";
         }
 
-        Time.timeScale = 0;
+        if (timerText) timerText.text = $"Time: 0.0";
+        Time.timeScale = 1f; // Reset in case it was paused
+        onGameOverCallback?.Invoke(playerWon);
     }
 
     void SpawnByte()
