@@ -4,7 +4,7 @@ public class DialogueTest : MonoBehaviour
 {
     public void MikeyTestPressed()
     {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("mikeyIntroduction");
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("mikeyDialogue.FirstIntroduction");
     }
 
     public void SuzyTestPressed()

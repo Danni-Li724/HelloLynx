@@ -59,4 +59,13 @@ public class DialogueEvents
             onUpdateChoiceIndex(choiceIndex);
         }
     }
+
+    public event Action<bool> onCanContinueToNextLine;
+    public void CanContinueToNextLine(bool choice)
+    {
+        if (onCanContinueToNextLine != null)
+        {
+            onCanContinueToNextLine(choice);
+        }
+    }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.InputSystem.XR.Haptics;
+using System.Runtime.CompilerServices;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     private Story story;
     private int currentChoiceIndex = -1;
 
+    private bool canContinueToNextLine = false;
     private bool dialoguePlaying = false;
 
     private InkExternalFunctions inkExternalFunctions;
@@ -35,6 +37,7 @@ public class DialogueManager : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.onEnterDialogue += EnterDialogue;
         GameEventsManager.instance.dialogueEvents.onSubmitPressed += SubmitPressed;
         GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += UpdateChoiceIndex;
+        GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine += CanContinueToNextLine;
     }
 
     private void OnDisable()
@@ -42,6 +45,7 @@ public class DialogueManager : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
         GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
         GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
+        GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
     }
 
     private void UpdateChoiceIndex(int choiceIndex)
@@ -56,7 +60,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        ContinueOrExitStory();
+        if (canContinueToNextLine)
+        {
+            ContinueOrExitStory();
+        }  
     }
 
     private void EnterDialogue(string knotName)
@@ -82,6 +89,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         ContinueOrExitStory();
+    }
+
+    private void CanContinueToNextLine(bool choice)
+    {
+        canContinueToNextLine = choice;
     }
 
     private void ContinueOrExitStory()
@@ -112,7 +124,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 GameEventsManager.instance.dialogueEvents.DisplayDialogue(dialogueLine, story.currentChoices);
-            }                
+            }
         }
 
         else if (story.currentChoices.Count == 0)
@@ -120,6 +132,7 @@ public class DialogueManager : MonoBehaviour
             ExitDialogue();
         }
     }
+
     private void ExitDialogue()
     {
         dialoguePlaying = false;
