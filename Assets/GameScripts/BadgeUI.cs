@@ -20,9 +20,6 @@ public class BadgeUI : MonoBehaviour
         badgePanel.SetActive(false);
         badgePanelOpen = false;
         badgeButton.onClick.AddListener(ToggleBadgePanel);
-        BadgeInventory.Instance.OnBadgeEarned += StartEarnedEffect;
-        BadgeInventory.Instance.OnBadgeChecked += StopEarnedEffect;
-
         // Save the original button color
         originalColor = badgeButton.image.color;
 
@@ -31,6 +28,26 @@ public class BadgeUI : MonoBehaviour
             StartEarnedEffect(default);
 
         RefreshBadgeList();
+    }
+    
+    private void OnEnable()
+    {
+        if (BadgeInventory.Instance != null)
+        {
+            BadgeInventory.Instance.OnBadgeEarned += StartEarnedEffect;
+            BadgeInventory.Instance.OnBadgeChecked += StopEarnedEffect;
+
+            // Check for unviewed badges on every enable
+            if (BadgeInventory.Instance.HasnewBadge())
+                StartEarnedEffect(default);
+        }
+    }
+    
+    private void OnDisable()
+    {
+        if (BadgeInventory.Instance == null) return;
+        BadgeInventory.Instance.OnBadgeEarned -= StartEarnedEffect;
+        BadgeInventory.Instance.OnBadgeChecked -= StopEarnedEffect;
     }
 
     void ToggleBadgePanel()
@@ -63,6 +80,7 @@ public class BadgeUI : MonoBehaviour
     void StartEarnedEffect(BadgeType badge)
     {
         StopEarnedEffect();
+        if (!BadgeInventory.Instance.HasnewBadge()) return;
         // Loop punch scale
         punchTween = badgeButton.transform
             .DOPunchScale(Vector3.one * 0.2f, 0.5f, 10, 1)
