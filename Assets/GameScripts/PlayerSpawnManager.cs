@@ -15,7 +15,6 @@ public class PlayerSpawnManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

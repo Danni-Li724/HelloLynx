@@ -13,7 +13,7 @@ public class BadgeUI : MonoBehaviour
     private bool badgePanelOpen = false;
     private Tween punchTween;
     private Tween colorTween;
-    private Color originalColor;
+    private Color originalColor = Color.white;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class BadgeUI : MonoBehaviour
         badgePanelOpen = false;
         badgeButton.onClick.AddListener(ToggleBadgePanel);
         // Save the original button color
-        originalColor = badgeButton.image.color;
+        //originalColor = badgeButton.image.color;
 
         // If there's an unchecked badge, start looping the effect!
         if (BadgeInventory.Instance.HasnewBadge())
