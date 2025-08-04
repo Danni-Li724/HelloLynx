@@ -11,7 +11,6 @@ public class PlayerDetector : MonoBehaviour
         if (other.CompareTag("Player"))
             OnPlayerEnter?.Invoke();
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

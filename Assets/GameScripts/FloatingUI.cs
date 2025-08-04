@@ -34,9 +34,14 @@ public class FloatingUI : MonoBehaviour
         PlayerDetector detector = GetComponent<PlayerDetector>();
         if (detector != null)
         {
-            detector.OnPlayerEnter += ShowUI;
-            detector.OnPlayerExit += HideUI;
+            //detector.OnPlayerEnter += ShowUI;
+            //detector.OnPlayerExit += HideUI;
         }
+    }
+
+    private void Update()
+    {
+        ShowUI();
     }
 
     private void ShowUI()

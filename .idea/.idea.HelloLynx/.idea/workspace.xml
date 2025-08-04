@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/BadgeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/BadgeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/FloatingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/FloatingUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/PlayerDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/AutomaticMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/AutomaticMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +95,7 @@
       <workItem from="1753966486986" duration="318000" />
       <workItem from="1753967719506" duration="9139000" />
       <workItem from="1754009794737" duration="4170000" />
+      <workItem from="1754310427470" duration="5851000" />
     </task>
     <servers />
   </component>
