@@ -49,5 +49,8 @@ TagManager:
   - name: Byte
     uniqueID: 135114467
     locked: 0
+  - name: New Layer 3
+    uniqueID: 1138929969
+    locked: 0
   m_RenderingLayers:
   - Default

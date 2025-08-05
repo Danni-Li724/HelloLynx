@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueChoiceButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueChoiceButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueChoiceButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueChoiceButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +92,7 @@
       <workItem from="1753967719506" duration="9139000" />
       <workItem from="1754009794737" duration="4170000" />
       <workItem from="1754310427470" duration="5851000" />
-      <workItem from="1754398885071" duration="2742000" />
+      <workItem from="1754398885071" duration="3356000" />
     </task>
     <servers />
   </component>
