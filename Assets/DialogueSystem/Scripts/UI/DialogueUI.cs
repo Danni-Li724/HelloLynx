@@ -10,6 +10,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.InputSystem;
 using JetBrains.Annotations;
+using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class DialogueUI : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private GameObject contentParent;
-    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private UnityEngine.UI.Text dialogueText;
     [SerializeField] private DialogueChoiceButton[] choiceButtons;
     [SerializeField] private GameObject continueIcon;
 
@@ -171,6 +172,4 @@ public class DialogueUI : MonoBehaviour
     {
         GameEventsManager.instance.dialogueEvents.SubmitPressed();
     }
-
-
 }

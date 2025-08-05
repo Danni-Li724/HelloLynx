@@ -5,14 +5,13 @@ using UnityEngine.InputSystem;
 
 public class DialogueInputs : MonoBehaviour
 {
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        DialogueInputPressed();
-    //    }
-    //}
-
+    void Update()
+    {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            StartCoroutine(ConfirmSubmit());
+        }
+    }
     public void DialogueConfirmPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -25,7 +24,6 @@ public class DialogueInputs : MonoBehaviour
     {
         //Wait till end of frame so dialogue choice can register correctly before the submit button is pressed from same input
         yield return new WaitForEndOfFrame();
-
         GameEventsManager.instance.dialogueEvents.SubmitPressed();
     }
 }

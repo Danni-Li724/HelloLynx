@@ -7,7 +7,7 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler, IPointerEnter
 {
     [Header("Components")]
     [SerializeField] private Button button;
-    [SerializeField] private TextMeshProUGUI choiceText;
+    [SerializeField] private Text choiceText;
 
     private int choiceIndex = -1;
 
