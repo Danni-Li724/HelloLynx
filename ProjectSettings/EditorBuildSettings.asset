@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Mikey.unity
     guid: 144941e5331ed3443a042005f03bab7e
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b52fdb5eaa15af94abd4a630b22b125b, type: 3}
   m_UseUCBPForAssetBundles: 0

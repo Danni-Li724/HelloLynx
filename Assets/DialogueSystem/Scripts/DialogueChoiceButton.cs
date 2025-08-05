@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
+public class DialogueChoiceButton : MonoBehaviour, ISelectHandler, IPointerEnterHandler
 {
     [Header("Components")]
     [SerializeField] private Button button;
@@ -29,5 +29,10 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        SelectButton();
     }
 }
