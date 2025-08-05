@@ -421,6 +421,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944689210063636344, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: typingSpeed
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944689210063636344, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
       propertyPath: continueIcon
       value: 
       objectReference: {fileID: 950517868584741176}
