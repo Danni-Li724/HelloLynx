@@ -497,6 +497,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5267227490210902438, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267227490210902438, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5376835
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267227490210902438, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_Color.r
+      value: 0.48584908
+      objectReference: {fileID: 0}
     - target: {fileID: 5910871765733085746, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -589,21 +601,6 @@ PrefabInstance:
       addedObject: {fileID: 528348613}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
---- !u!1 &282856074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5910871765733085746, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
-  m_PrefabInstance: {fileID: 282856073}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &282856075 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8532185853251969326, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
-  m_PrefabInstance: {fileID: 282856073}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &282856076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6898034596102813998, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
-  m_PrefabInstance: {fileID: 282856073}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &282856077 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 70256624249542428, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
@@ -2549,9 +2546,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 282856077}
   minigameUIPanel: {fileID: 1527258957}
   minigameGameplay: {fileID: 53706891}
-  startButtonObj: {fileID: 282856076}
-  tryAgainButtonObj: {fileID: 282856075}
-  returnButtonObj: {fileID: 282856074}
+  startButtonObj: {fileID: 0}
+  tryAgainButtonObj: {fileID: 0}
+  returnButtonObj: {fileID: 0}
   resultText: {fileID: 1885671581}
   badgeTypeForWin: 1
   cpuGameManager: {fileID: 1984277613}
