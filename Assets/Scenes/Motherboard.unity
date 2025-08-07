@@ -1899,6 +1899,7 @@ MonoBehaviour:
   transitionSceneName: Suzy
   spawnId: Suzy
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &276688519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,10 +2370,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
-  interactableType: 1
+  interactableType: 5
   transitionSceneName: 
   spawnId: 
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &383714672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2588,6 +2590,7 @@ MonoBehaviour:
   transitionSceneName: 
   spawnId: 
   infoDescription: This is the power plant that powers the Lynx's powerful screen!
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &399685186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3672,6 +3675,7 @@ MonoBehaviour:
   spawnId: 
   infoDescription: This is the RAM, which processes operations and stores memories
     during runtime, receiving data and instrucitons from Suay and Mikey.
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &507095462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3975,6 +3979,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 377903883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &653540460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2911894568973877454, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+  m_PrefabInstance: {fileID: 1452340524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &677524126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4342,10 +4351,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
-  interactableType: 1
+  interactableType: 5
   transitionSceneName: 
   spawnId: 
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &754342818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4581,10 +4591,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
-  interactableType: 1
+  interactableType: 5
   transitionSceneName: 
   spawnId: 
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &780279337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4769,6 +4780,7 @@ MonoBehaviour:
   spawnId: 
   infoDescription: This is the screen of the Lynx where everything is rendered. It
     has a LCD under light and double buffering system.
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &798009405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7732,9 +7744,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.42944014, y: 1.9619452}
-      - {x: -1.6896938, y: 0.68692434}
-      - {x: -2.930774, y: -0.018144175}
+    - - {x: 0.8869323, y: 1.7005215}
+      - {x: -1.0797048, y: 0.5344267}
+      - {x: -2.625779, y: -0.3884947}
       - {x: -2.9754715, y: -0.62006366}
       - {x: -0.52036166, y: -2.0458612}
       - {x: 2.9067628, y: -0.018847644}
@@ -8219,6 +8231,7 @@ MonoBehaviour:
   transitionSceneName: Mikey
   spawnId: Mikey
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!1 &1478510157
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,10 +11307,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
-  interactableType: 1
+  interactableType: 5
   transitionSceneName: 
   spawnId: 
   infoDescription: 
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &2032753693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11894,6 +11908,7 @@ MonoBehaviour:
   transitionSceneName: 
   spawnId: 
   infoDescription: This is the speaker thatplays audio when you are playing games!
+  dialoguePanel: {fileID: 653540460}
 --- !u!114 &2140448888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11957,7 +11972,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 3.3073044, y: -0.37028503}
+  m_Offset: {x: 3.9287567, y: -0.99172974}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11967,7 +11982,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.905296, y: 10.640121}
+  m_Size: {x: 18.776932, y: 11.883011}
   m_EdgeRadius: 0
 --- !u!4 &2140448891
 Transform:
@@ -11978,7 +11993,7 @@ Transform:
   m_GameObject: {fileID: 2140448886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.7, y: 61.1, z: 0}
+  m_LocalPosition: {x: -94.6, y: 45.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

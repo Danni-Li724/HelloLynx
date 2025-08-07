@@ -10,7 +10,8 @@ public class InteractableDialogue : MonoBehaviour
         ShowScreenInfo,
         ShowRamInfo,
         ShowSpeakerInfo,
-        ShowPowerInfo
+        ShowPowerInfo,
+        TouchCapacitor
     }
 
     [Header("UI Settings")] 
@@ -23,6 +24,7 @@ public class InteractableDialogue : MonoBehaviour
     public string spawnId;
     public string infoDescription;
     private bool hasBeenInteracted = false;
+    public GameObject dialoguePanel;
 
     private static InteractableDialogue activeInteractable;
 
@@ -36,6 +38,11 @@ public class InteractableDialogue : MonoBehaviour
             detector.OnPlayerEnter += () =>
             {
                 activeInteractable = this;
+                if (interactableType == InteractableType.ShowScreenInfo || 
+                    interactableType == InteractableType.ShowSpeakerInfo ||
+                    interactableType == InteractableType.ShowPowerInfo ||
+                    interactableType == InteractableType.ShowRamInfo)
+                {if(dialoguePanel) dialoguePanel.SetActive(true);}
             };
             detector.OnPlayerExit += () =>
             {
@@ -46,7 +53,7 @@ public class InteractableDialogue : MonoBehaviour
                     interactableType == InteractableType.ShowSpeakerInfo ||
                     interactableType == InteractableType.ShowPowerInfo ||
                     interactableType == InteractableType.ShowRamInfo)
-                    InfoPanel.instance.hide();
+                {if(dialoguePanel) dialoguePanel.SetActive(false);}
             };
         }
     }
