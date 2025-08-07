@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     public float buttonDuration = 0.8f;
     public float floatStrength = 10f;
     public float floatDuration = 1.2f;
-    public float buttonYOffset = -50f;
+    public float buttonYOffset = -40f;
 
     private Vector2 leftStartPos, rightStartPos, buttonStartPos;
     private Vector2 leftEndPos, rightEndPos, buttonEndPos;
