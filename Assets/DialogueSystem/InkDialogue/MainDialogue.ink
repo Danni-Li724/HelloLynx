@@ -7,6 +7,10 @@ EXTERNAL StartCollisionControl()
 EXTERNAL StartByteRunner()
 EXTERNAL AwardCollisionControlBadge()
 EXTERNAL AwardByteRunnerBadge()
+EXTERNAL AwardScreenBadge()
+EXTERNAL AwardRamBadge()
+EXTERNAL AwardAudioBadge()
+EXTERNAL AwardPowerBadge()
 
 /////////////////////////////////////
 
@@ -187,6 +191,7 @@ EXTERNAL AwardByteRunnerBadge()
             What does “double buffering” help prevent? # speaker: Narrator
                 + [> Screen tearing] # correct
                     That’s right! When graphics and screen refreshes aren’t in sync, you get tearing. Double buffering avoids that. # speaker: Narrator
+                    ~ AwardScreenBadge()
                     ~ ExitDialogue()
                     -> DONE
                 + [> Memory leaks]
@@ -211,6 +216,7 @@ EXTERNAL AwardByteRunnerBadge()
             How much RAM does the Lynx have? # speaker: Narrator
                 + [> 64 kilobytes] # correct
                     You got it! That’s 65,536 bytes—tight quarters, but doable. # speaker: Narrator
+                    ~ AwardRamBadge()
                     ~ ExitDialogue()
                     -> DONE
                 + [> 1 megabyte]
@@ -234,6 +240,7 @@ EXTERNAL AwardByteRunnerBadge()
             How many audio channels can the Lynx play at once? # speaker: Narrator
                 + [> 4] # correct
                     Yep! Four channels, handled entirely in hardware. # speaker: Narrator
+                    ~ AwardAudioBadge()
                     ~ ExitDialogue()
                     -> DONE
                 + [> 2]

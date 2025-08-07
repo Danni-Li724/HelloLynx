@@ -9,6 +9,11 @@ public class MikeyMinigameController : MinigameControllerBase
         if (cpuGameManager) cpuGameManager.BeginMinigame(OnCpuGameOver);
     }
 
+    public void BeginCPUGame()
+    {
+        BeginMinigame();
+    }
+
     protected override void ResetMinigame()
     {
         if (cpuGameManager) cpuGameManager.ResetMinigame();

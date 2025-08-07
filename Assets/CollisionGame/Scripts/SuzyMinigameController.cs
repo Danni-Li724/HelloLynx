@@ -15,6 +15,11 @@ public class SuzyMinigameController : MinigameControllerBase
             gameTimer.StartTimer();
         }
     }
+
+    public void BeginCollisionGame()
+    {
+        BeginMinigame();
+    }
     protected override void ResetMinigame()
     {
         if (collisionManager) collisionManager.ResetMinigame();

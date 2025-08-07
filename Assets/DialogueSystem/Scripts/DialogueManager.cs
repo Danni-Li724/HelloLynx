@@ -7,6 +7,8 @@ using System.Runtime.CompilerServices;
 
 public class DialogueManager : MonoBehaviour
 {
+    
+    public static DialogueManager Instance { get; private set; }
     [Header("Ink Story")]
     [SerializeField] private TextAsset inkJson;
 
@@ -21,6 +23,12 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
         story = new Story(inkJson.text);
         inkExternalFunctions = new InkExternalFunctions();
         inkExternalFunctions.Bind(story);
@@ -29,7 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        inkExternalFunctions.Unbind(story);
+        if (Instance == this && inkExternalFunctions != null && story != null)
+            inkExternalFunctions.Unbind(story);
     }
 
     private void Start()
@@ -42,10 +51,13 @@ public class DialogueManager : MonoBehaviour
 
     private void OnDisable()
     {
-        GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
-        GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
-        GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
-        GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
+        if (GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
+        {
+            GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
+            GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
+            GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
+            GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
+        }
     }
 
     private void UpdateChoiceIndex(int choiceIndex)

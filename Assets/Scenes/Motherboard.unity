@@ -1387,6 +1387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
   interactableType: 0
   transitionSceneName: Suzy
   spawnId: Suzy
@@ -1454,7 +1456,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.9328861, y: 0.1666677}
+  m_Offset: {x: 0.9328861, y: 0.73539186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1464,7 +1466,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.946644, y: 7.500032}
+  m_Size: {x: 7.946644, y: 6.3625836}
   m_EdgeRadius: 0
 --- !u!4 &276688522
 Transform:
@@ -1475,7 +1477,7 @@ Transform:
   m_GameObject: {fileID: 276688517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.24, y: -9.7, z: 0}
+  m_LocalPosition: {x: 90.4, y: -29.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1724,7 +1726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableType: 1
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  interactableType: 4
   transitionSceneName: 
   spawnId: 
   infoDescription: This is the power plant that powers the Lynx's powerful screen!
@@ -1791,7 +1795,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.6840019, y: 1.5010772}
+  m_Offset: {x: -0.82528114, y: 0.3897972}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1801,7 +1805,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 12.853828, y: 10.168851}
+  m_Size: {x: 11.136387, y: 9.764751}
   m_EdgeRadius: 0
 --- !u!4 &399685189
 Transform:
@@ -1812,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 399685184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.19, y: 53.67, z: 0}
+  m_LocalPosition: {x: -63.2, y: 30.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2697,6 +2701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
   interactableType: 1
   transitionSceneName: 
   spawnId: 
@@ -3514,13 +3520,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -27.777622, y: 24.08514}
-      - {x: -32.6575, y: 21.726627}
-      - {x: -34.593452, y: 14.896713}
-      - {x: -42.825546, y: 8.966587}
-      - {x: -7.2901106, y: -12.048256}
-      - {x: 11.888973, y: -0.9145508}
-      - {x: 12.35941, y: 1.6153183}
+    - - {x: -1.3764114, y: 9.202608}
+      - {x: -8.702738, y: 8.06732}
+      - {x: -5.1341877, y: 3.9896488}
+      - {x: -0.8282547, y: -0.6153183}
+      - {x: 2.2917948, y: -1.1411924}
+      - {x: 9.340593, y: -1.1184216}
+      - {x: 11.441993, y: 1.8191891}
   m_UseDelaunayMesh: 0
 --- !u!114 &798009404
 MonoBehaviour:
@@ -3534,6 +3540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
   interactableType: 1
   transitionSceneName: 
   spawnId: 
@@ -3577,7 +3585,7 @@ Transform:
   m_GameObject: {fileID: 798009402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 30.3, z: 0}
+  m_LocalPosition: {x: 15.1, y: 20.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3709,7 +3717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.58, y: 3.16}
+  m_AnchoredPosition: {x: 0.58, y: 4.2}
   m_SizeDelta: {x: 596, y: 335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876746352
@@ -5934,6 +5942,75 @@ PolygonCollider2D:
       - {x: 2.9067628, y: -0.018847644}
       - {x: 2.874949, y: 0.5495039}
   m_UseDelaunayMesh: 0
+--- !u!1001 &1452340524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 683200145760498643, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682055591366499052, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944689210063636344, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: typingSpeed
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.39586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46.82758
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399368351851034044, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537525830912503394, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
+      propertyPath: m_Name
+      value: DialogueSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a086c89fd8ec79144b782348bea90a31, type: 3}
 --- !u!1 &1454454526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,7 +6265,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.54166985, y: 0.1666677}
+  m_Offset: {x: -0.08521271, y: -0.2897873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6198,7 +6275,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.7500343, y: 7.500032}
+  m_Size: {x: 8.662949, y: 8.412941}
   m_EdgeRadius: 0
 --- !u!4 &1478219589
 Transform:
@@ -6209,7 +6286,7 @@ Transform:
   m_GameObject: {fileID: 1478219585}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.76, y: -18.09, z: 0}
+  m_LocalPosition: {x: 45.17, y: -41.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6228,6 +6305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
   interactableType: 0
   transitionSceneName: Mikey
   spawnId: Mikey
@@ -8865,7 +8944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3a1c1a94a41024dbc176c5838fa2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableType: 1
+  unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  interactableType: 3
   transitionSceneName: 
   spawnId: 
   infoDescription: This is the speaker thatplays audio when you are playing games!
@@ -8932,7 +9013,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.8156185, y: -2.9199886}
+  m_Offset: {x: 3.3073044, y: -0.37028503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8942,7 +9023,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 16.330196, y: 15.739529}
+  m_Size: {x: 10.905296, y: 10.640121}
   m_EdgeRadius: 0
 --- !u!4 &2140448891
 Transform:
@@ -8953,7 +9034,7 @@ Transform:
   m_GameObject: {fileID: 2140448886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.12, y: 69.25, z: 0}
+  m_LocalPosition: {x: -63.7, y: 61.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8993,3 +9074,4 @@ SceneRoots:
   - {fileID: 446102721}
   - {fileID: 98042926}
   - {fileID: 904320989}
+  - {fileID: 1452340524}

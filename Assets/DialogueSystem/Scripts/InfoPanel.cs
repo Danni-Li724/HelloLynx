@@ -23,6 +23,6 @@ public class InfoPanel : MonoBehaviour
     }
     public void hide()
     { 
-        infoPanel.SetActive(false);
+        if(infoPanel) infoPanel.SetActive(false);
     }
 }

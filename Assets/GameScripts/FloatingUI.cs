@@ -44,6 +44,13 @@ public class FloatingUI : MonoBehaviour
         ShowUI();
     }
 
+    public void SetColor(Color color)
+    {
+        var img = uiRoot.GetComponentInChildren<Image>();
+        if (img) img.color = color;
+        if (nameText) nameText.color = color;
+    }
+
     private void ShowUI()
     {
         if (uiRoot != null)

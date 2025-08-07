@@ -7,19 +7,30 @@ public class InteractableDialogue : MonoBehaviour
     public enum InteractableType
     {
         TransitionToScene,
-        ShowInfo
+        ShowScreenInfo,
+        ShowRamInfo,
+        ShowSpeakerInfo,
+        ShowPowerInfo
     }
+
+    [Header("UI Settings")] 
+    public Color unvistedColor = Color.yellow;
+    public Color visitedColor = Color.green;
+    private FloatingUI floatingUI;
 
     public InteractableType interactableType;
     public string transitionSceneName;
     public string spawnId;
     public string infoDescription;
+    private bool hasBeenInteracted = false;
 
     private static InteractableDialogue activeInteractable;
 
     void Start()
     {
         PlayerDetector detector = GetComponent<PlayerDetector>();
+        floatingUI = GetComponent<FloatingUI>();
+        if(floatingUI != null) floatingUI.SetColor(unvistedColor);
         if (detector != null)
         {
             detector.OnPlayerEnter += () =>
@@ -31,7 +42,10 @@ public class InteractableDialogue : MonoBehaviour
                 if (activeInteractable == this)
                     activeInteractable = null;
 
-                if (interactableType == InteractableType.ShowInfo)
+                if (interactableType == InteractableType.ShowScreenInfo || 
+                    interactableType == InteractableType.ShowSpeakerInfo ||
+                    interactableType == InteractableType.ShowPowerInfo ||
+                    interactableType == InteractableType.ShowRamInfo)
                     InfoPanel.instance.hide();
             };
         }
@@ -46,8 +60,17 @@ public class InteractableDialogue : MonoBehaviour
                 case InteractableType.TransitionToScene:
                     TransitionToScene();
                     break;
-                case InteractableType.ShowInfo:
-                    ShowInfo();
+                case InteractableType.ShowScreenInfo:
+                    ShowScreenInfo();
+                    break;
+                case InteractableType.ShowRamInfo:
+                    ShowRAMInfo();
+                    break;
+                case InteractableType.ShowSpeakerInfo:
+                    ShowSpeakerInfo();
+                    break;
+                case InteractableType.ShowPowerInfo:
+                    ShowPowerInfo();
                     break;
             }
         }
@@ -64,9 +87,39 @@ public class InteractableDialogue : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(transitionSceneName);
     }
 
-    private void ShowInfo()
+    private void ShowScreenInfo()
     {
-        InfoPanel.instance.show(infoDescription);
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("screenTrivia.Introduction");
+        MarkAsVisited();
     }
+
+    private void ShowRAMInfo()
+    {
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("ramTrivia.Introduction");
+        MarkAsVisited();
+    }
+
+    private void ShowSpeakerInfo()
+    {
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("speakerTrivia.Introduction");
+        MarkAsVisited();
+    }
+
+    private void ShowPowerInfo()
+    {
+        GameEventsManager.instance.dialogueEvents.EnterDialogue("powerTrivia.Introduction");
+        MarkAsVisited();
+    }
+
+    private void MarkAsVisited()
+    {
+        if (!hasBeenInteracted)
+        {
+            hasBeenInteracted = true;
+            if(floatingUI != null)
+                floatingUI.SetColor(visitedColor);
+        }
+    }
+
 }
 
