@@ -7,16 +7,9 @@ public class DialogueInputs : MonoBehaviour
 {
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             StartCoroutine(ConfirmSubmit());
-        }
-    }
-    public void DialogueConfirmPressed(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            ConfirmSubmit();
         }
     }
 

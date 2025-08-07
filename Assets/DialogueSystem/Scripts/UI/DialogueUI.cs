@@ -10,7 +10,6 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.InputSystem;
 using JetBrains.Annotations;
-using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject contentParent;
     [SerializeField] private UnityEngine.UI.Text dialogueText;
     [SerializeField] private DialogueChoiceButton[] choiceButtons;
+    [SerializeField] private Button decoyButton;
     [SerializeField] private GameObject continueIcon;
 
     //[SerializeField] private Button submitButton;
@@ -29,7 +29,9 @@ public class DialogueUI : MonoBehaviour
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
 
-    private List<Ink.Runtime.Choice> currentDialogueChoices; 
+    private List<Ink.Runtime.Choice> currentDialogueChoices;
+
+    [SerializeField] private bool wasSubmitPressed;
 
     private void Awake()
     {
@@ -42,6 +44,9 @@ public class DialogueUI : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.onDialogueStarted += DialogueStarted;
         GameEventsManager.instance.dialogueEvents.onDialogueFinished += DialogueFinished;
         GameEventsManager.instance.dialogueEvents.onDisplayDialogue += DisplayDialogue;
+
+        wasSubmitPressed = false;
+
     }
 
     private void OnDisable()
@@ -114,8 +119,13 @@ public class DialogueUI : MonoBehaviour
     {
         foreach (DialogueChoiceButton choiceButton in choiceButtons)
         {
+            choiceButton.GetComponent<DialogueChoiceButton>().DefaultTextColour();
+            choiceButton.GetComponent<DialogueChoiceButton>().choiceIndex = -1;
+            
             choiceButton.gameObject.SetActive(false);
         }
+
+        decoyButton.Select();
 
     }
 
@@ -139,14 +149,6 @@ public class DialogueUI : MonoBehaviour
         //display each letter of new line one at a time
         foreach (char letter in line.ToCharArray())
         {
-            //if (InputManager.GetInstance().GetSubmitPressed))
-            //{
-            //    dialogueText.text = line;
-            //    break;
-            //}
-
-            //THE CODE ABOVE WILL SKIP THE TYPING PROCESS AND INSTANTLY COMPLETE THE CURRENT LINE, IT RELIES ON THEIR BEING AN INSTANCED INPUT MANAGER SCRIPT IN THE PROJECT THAT CAN RETURN A BOOL WHEN THE SUBMIT INPUTEVENT IS PRESSED.
-
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
@@ -167,7 +169,6 @@ public class DialogueUI : MonoBehaviour
         dialogueText.text = "";
     }
 
-    //INPUT FOR PROGRESSING THROUGH DIALOGUE, THIS WILL BE REPLACED BY USE OF UNITY INPUTSYSTEM (LEFT MOUSE CLICK, ENTER/RETURN, SPACEBAR)
     public void SubmitPressed()
     {
         GameEventsManager.instance.dialogueEvents.SubmitPressed();
