@@ -23,30 +23,32 @@ public class HoppingBytes : AutomaticMovement
         Transform target = waypoints[currentWaypointIndex];
         Vector3 targetPosition = target.position;
         Vector3 currentPosition = transform.position;
-        
+    
         Vector3 newPosition = Vector3.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+
+        // Bobbing as before...
         float sineFrequency = .5f;
         float sineAmplitude = .02f;
         float time = Time.time;
         float currentSine = Mathf.Sin(time * Mathf.PI * 2f * sineFrequency);
         float bobOffset = currentSine * sineAmplitude;
         newPosition.y += bobOffset;
-        if (previousSine < currentSine && currentSine >= 0.9999f)
-        {
-            ShowPopUp();
-        }
-        previousSine = currentSine;
-        
-        transform.position = newPosition;
-        if (faceDirection && (targetPosition - currentPosition).sqrMagnitude > 0.01f)
-        {
-            FaceDirection((targetPosition - currentPosition).normalized);
-        }
 
+        // Show popup on hop peak
+        if (previousSine < currentSine && currentSine >= 0.9999f)
+            ShowPopUp();
+        previousSine = currentSine;
+
+        // Assign position
+        transform.position = newPosition;
+
+        // Flip sprite left/right ONLY
+        if (faceDirection && Mathf.Abs(targetPosition.x - currentPosition.x) > 0.01f)
+            FaceDirection(targetPosition - currentPosition);
+
+        // Waypoint update
         if (Vector3.Distance(newPosition, targetPosition) < 0.1f)
-        {
             UpdateWaypoint();
-        }
     }
 
     IEnumerator HopToWaypoint(Vector2 target)
@@ -75,7 +77,7 @@ public class HoppingBytes : AutomaticMovement
         if (popupTextPrefab == null) return;
         int randomValue = Random.Range(0, 2);
         string text = randomValue.ToString();
-        GameObject popup = Instantiate(popupTextPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+        GameObject popup = Instantiate(popupTextPrefab, transform.position + Vector3.up * 2f, Quaternion.identity);
         
         Text tempText = popup.GetComponentInChildren<Text>();
         if (tempText != null)
@@ -90,5 +92,14 @@ public class HoppingBytes : AutomaticMovement
         if (!cg) cg = popup.AddComponent<CanvasGroup>();
         popupSeq.Join(cg.DOFade(0, popupDuration));
         popupSeq.OnComplete(() => Destroy(popup));
+    }
+    
+    protected override void FaceDirection(Vector2 direction)
+    {
+        // Only flip, do not rotate!
+        if (direction.x < -0.01f)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else if (direction.x > 0.01f)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 }

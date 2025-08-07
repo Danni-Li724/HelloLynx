@@ -42,11 +42,12 @@ public class CPUGameManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        enabled = false;
     }
 
     private void Start()
     {
-        timeLeft = totalGameTime;
+        //timeLeft = totalGameTime;
         UpdateTimerUI();
     }
     private void Update()

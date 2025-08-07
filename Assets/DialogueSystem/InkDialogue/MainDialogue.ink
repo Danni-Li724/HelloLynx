@@ -22,8 +22,10 @@ EXTERNAL AwardPowerBadge()
             But enough about me! What brings you to this old motherboard? # speaker: Suzy
             + [> Honestly, this whole thing fascinates me.] # speaker: Player
                 Love that. Not many people take the time to notice what goes on inside their machines! # speaker: Suzy
+                -> Questions
             + [> I just wanted to see how games worked back then.] # speaker: Player
                 Retro detective, huh? You’re in the right place. # speaker: Suzy
+                -> Questions
             + [> I like learning weird stuff.] # speaker: Player
                 Weird is underrated. You’ve got a good brain. I like you already ;)! # speaker: Suzy
             You ask the right kind of questions. Curious, grounded... you’d make a decent engineer. Or artist. Or both! Want to know how I work? I promise it’s cooler than it sounds. # speaker: Suzy
@@ -108,6 +110,7 @@ EXTERNAL AwardPowerBadge()
         
 
 === mikeyDialogue ===
+    = FirstIntroduction
     Hi there. (He adjusts his glasses, looking up from his clipboard.) # speaker: Mikey
             You don't look like you're from around here. Curious visitor, huh? # speaker: Mikey
             I'm Mikey—the main processor of the Lynx. That said, I wouldn't get very far without Suzy. She's faster, louder... and never lets me forget it. # speaker: Mikey
@@ -115,10 +118,13 @@ EXTERNAL AwardPowerBadge()
             Say, how’s your day going so far? # speaker: Mikey
             + [> Honestly? Kinda great. I’ve never seen anything like this.] # speaker: Player
                 That’s good to hear. Always nice when someone shows up with an open mind. # speaker: Mikey
+                -> Questions
             + [> It’s cool—kinda surreal. Everything’s so... alive in here.] # speaker: Player
                 I’m glad you feel that way. There’s a lot going on under the surface—literally. # speaker: Mikey
+                -> Questions
             + [> I’m just happy to learn something new.] # speaker: Player
                 That’s an excellent mindset. Curiosity is how you make the invisible visible. # speaker: Mikey
+                -> Questions
             Honestly? My days are always productive. Busy, but satisfying. That’s the joy of structure—you always know what comes next. # speaker: Mikey
             Anyway, if you’re interested, I’ve got time for some questions. Or I can show you what I’ve been working on. # speaker: Mikey
             -> Questions

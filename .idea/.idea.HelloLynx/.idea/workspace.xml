@@ -6,16 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/BytePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/BytePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InkyIntegration/InkExternalFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InkyIntegration/InkExternalFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/FloatingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/FloatingUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/BadgeSprites.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/BadgeSprites.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/BinaryEffectCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/BinaryEffectCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/HoppingBytes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/HoppingBytes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
