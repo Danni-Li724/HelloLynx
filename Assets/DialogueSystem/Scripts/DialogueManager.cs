@@ -95,7 +95,6 @@ public class DialogueManager : MonoBehaviour
     {
         canContinueToNextLine = choice;
     }
-
     private void ContinueOrExitStory()
     {
         //make a choice (if applicable)
@@ -132,7 +131,6 @@ public class DialogueManager : MonoBehaviour
             ExitDialogue();
         }
     }
-
     private void ExitDialogue()
     {
         dialoguePlaying = false;
@@ -143,10 +141,8 @@ public class DialogueManager : MonoBehaviour
 
         story.ResetState();
     }
-
     private bool IsLineBlank(string dialogueLine)
     {
         return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("\n");
     }
-
 }

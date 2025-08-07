@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,9 +14,26 @@ public abstract class MinigameControllerBase : MonoBehaviour
     public GameObject returnButtonObj;
     public Text resultText;
 
+    [Header("Pop Button")] 
+    public GameObject popButton;
+    public float popScale = 1.2f;
+    public float popDuration = 0.2f;
+    public float floatStrength = 20f;
+    public float floatDuration = 1.2f;
+
+    private RectTransform rectTransform;
+    private Vector2 startAnchoredPos;
+    private Vector3 originalScale;
+
     [Header("Badge Reward")]
     public BadgeType badgeTypeForWin;
 
+    void Awake()
+    {
+        rectTransform = popButton.GetComponent<RectTransform>();
+        startAnchoredPos = rectTransform.anchoredPosition;
+        originalScale = rectTransform.localScale;
+    }
     protected virtual void Start()
     {
         if (minigameUIPanel) minigameUIPanel.SetActive(false);
@@ -23,6 +41,29 @@ public abstract class MinigameControllerBase : MonoBehaviour
         if (tryAgainButtonObj) tryAgainButtonObj.SetActive(false);
         if (returnButtonObj) returnButtonObj.SetActive(false);
         if (resultText) resultText.text = "";
+        
+        // dialogue button stuff
+        rectTransform.localScale = originalScale;
+        rectTransform.DOScale(originalScale * popScale, popDuration * 0.5f)
+            .SetEase(Ease.OutBack)
+            .OnComplete(() =>
+            {
+                rectTransform.DOScale(originalScale, popDuration * 0.5f)
+                    .SetEase(Ease.InBack)
+                    .OnComplete(StartFloating);
+            });
+    }
+
+    public void HidePopButton()
+    {
+        if (popButton) popButton.SetActive(false);
+    }
+
+    void StartFloating()
+    {
+        rectTransform.DOAnchorPosY(startAnchoredPos.y + floatStrength, floatDuration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine);
     }
 
     // Call when dialogue finished

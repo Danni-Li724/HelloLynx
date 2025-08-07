@@ -12,7 +12,6 @@ public class DialogueInputs : MonoBehaviour
             StartCoroutine(ConfirmSubmit());
         }
     }
-
     private IEnumerator ConfirmSubmit()
     {
         //Wait till end of frame so dialogue choice can register correctly before the submit button is pressed from same input

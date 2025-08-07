@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CollisionControls.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CollisionControls.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +31,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CPUGame/MikeyMinigameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/DialogueSessionData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameScripts/FrontLayerTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -29,18 +43,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "jamie2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.4f1\Editor\Unity.exe" />
@@ -94,6 +108,7 @@
       <workItem from="1754398885071" duration="3356000" />
       <workItem from="1754479460053" duration="3957000" />
       <workItem from="1754484418753" duration="73000" />
+      <workItem from="1754567068107" duration="8580000" />
     </task>
     <servers />
   </component>

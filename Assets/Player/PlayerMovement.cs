@@ -16,7 +16,7 @@ public class PlayerMovement : AutomaticMovement
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animationController = GetComponent<CharacterAnimationController>();
+        animationController = GetComponentInChildren<CharacterAnimationController>();
         if (rb == null)
         {
             Debug.LogError("Rigidbody2D is missing! Please add it to the player.");
