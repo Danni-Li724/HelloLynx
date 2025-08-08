@@ -149,6 +149,13 @@ public class DialogueUI : MonoBehaviour
         //display each letter of new line one at a time
         foreach (char letter in line.ToCharArray())
         {
+            if (Mouse.current.leftButton.isPressed)
+            {
+                dialogueText.text = line;
+
+                break;
+            }
+            
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }

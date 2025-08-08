@@ -3,7 +3,6 @@ using Ink.Runtime;
 
 public class InkExternalFunctions
 {
-    
     private SuzyMinigameController suzyMinigameController;
     private MikeyMinigameController mikeyMinigameController;
     public void Bind (Story story)
