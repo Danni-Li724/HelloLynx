@@ -1255,6 +1255,7 @@ MonoBehaviour:
   - {fileID: 461982600}
   - {fileID: 1160931052}
   - {fileID: 723387392}
+  autoStart: 0
   spawnInterval: 2
   maxToSpawn: 1000
 --- !u!61 &237300153
@@ -1895,6 +1896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Suzy
   spawnId: Suzy
@@ -2222,6 +2225,7 @@ MonoBehaviour:
   - {fileID: 1681203854}
   - {fileID: 1100808964}
   - {fileID: 1551437567}
+  autoStart: 0
   spawnInterval: 2
   maxToSpawn: 10
 --- !u!61 &359291104
@@ -2370,6 +2374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 359291103}
+  restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
   spawnId: 
@@ -2586,6 +2592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 4
   transitionSceneName: 
   spawnId: 
@@ -3670,6 +3678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 2
   transitionSceneName: 
   spawnId: 
@@ -4351,6 +4361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 918200561}
+  restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
   spawnId: 
@@ -4591,6 +4603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 237300152}
+  restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
   spawnId: 
@@ -4775,6 +4789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 1
   transitionSceneName: 
   spawnId: 
@@ -5394,6 +5410,7 @@ MonoBehaviour:
   - {fileID: 365712724}
   - {fileID: 1047261673}
   - {fileID: 1191647751}
+  autoStart: 0
   spawnInterval: 2
   maxToSpawn: 10
 --- !u!61 &918200562
@@ -7010,9 +7027,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundMusicSource: {fileID: 0}
   footstepSource: {fileID: 0}
-  backgroundMusic: {fileID: 8300000, guid: 064a1c9d89c624847952108bece5646b, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 51a7b8380d2eb7943a275fdce4e690fb, type: 3}
   footstepSound: {fileID: 8300000, guid: 0b21b7e3610aa2f419ac0fe6ee468080, type: 3}
-  musicVolume: 0.443
+  musicVolume: 0.8
   footStepsVolume: 0.132
 --- !u!4 &1247698721
 Transform:
@@ -8227,6 +8244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Mikey
   spawnId: Mikey
@@ -8809,7 +8828,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9923,7 +9942,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 20
+    OrthographicSize: 30
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -11307,6 +11326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 2079803077}
+  restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
   spawnId: 
@@ -11589,6 +11610,7 @@ MonoBehaviour:
   - {fileID: 1554291416}
   - {fileID: 38567875}
   - {fileID: 807834940}
+  autoStart: 0
   spawnInterval: 2
   maxToSpawn: 1000
 --- !u!61 &2079803078
@@ -11904,6 +11926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unvistedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   visitedColor: {r: 0, g: 1, b: 0, a: 1}
+  targetCapacitor: {fileID: 0}
+  restartIfAlreadySpawning: 0
   interactableType: 3
   transitionSceneName: 
   spawnId: 

@@ -18,7 +18,10 @@ public class InteractableDialogue : MonoBehaviour
     public Color unvistedColor = Color.yellow;
     public Color visitedColor = Color.green;
     private FloatingUI floatingUI;
-
+    
+    [Header("Interactable Settings")]
+    public Capacitor targetCapacitor; 
+    public bool restartIfAlreadySpawning = false;
     public InteractableType interactableType;
     public string transitionSceneName;
     public string spawnId;
@@ -31,6 +34,7 @@ public class InteractableDialogue : MonoBehaviour
     void Start()
     {
         PlayerDetector detector = GetComponent<PlayerDetector>();
+        dialoguePanel = GameObject.Find("DialoguePanelUI");
         floatingUI = GetComponent<FloatingUI>();
         if(floatingUI != null) floatingUI.SetColor(unvistedColor);
         if (detector != null)
@@ -38,22 +42,24 @@ public class InteractableDialogue : MonoBehaviour
             detector.OnPlayerEnter += () =>
             {
                 activeInteractable = this;
-                if (interactableType == InteractableType.ShowScreenInfo || 
-                    interactableType == InteractableType.ShowSpeakerInfo ||
-                    interactableType == InteractableType.ShowPowerInfo ||
-                    interactableType == InteractableType.ShowRamInfo)
-                {if(dialoguePanel) dialoguePanel.SetActive(true);}
+                // if (interactableType == InteractableType.ShowScreenInfo || 
+                //     interactableType == InteractableType.ShowSpeakerInfo ||
+                //     interactableType == InteractableType.ShowPowerInfo ||
+                //     interactableType == InteractableType.ShowRamInfo)
+                // {if(dialoguePanel) dialoguePanel.SetActive(true);}
             };
             detector.OnPlayerExit += () =>
             {
                 if (activeInteractable == this)
                     activeInteractable = null;
 
-                if (interactableType == InteractableType.ShowScreenInfo || 
-                    interactableType == InteractableType.ShowSpeakerInfo ||
-                    interactableType == InteractableType.ShowPowerInfo ||
-                    interactableType == InteractableType.ShowRamInfo)
-                {if(dialoguePanel) dialoguePanel.SetActive(false);}
+                // if (interactableType == InteractableType.ShowScreenInfo ||
+                //     interactableType == InteractableType.ShowSpeakerInfo ||
+                //     interactableType == InteractableType.ShowPowerInfo ||
+                //     interactableType == InteractableType.ShowRamInfo)
+                // {
+                //     if(dialoguePanel) dialoguePanel.SetActive(false);
+                // }
             };
         }
     }
@@ -78,6 +84,9 @@ public class InteractableDialogue : MonoBehaviour
                     break;
                 case InteractableType.ShowPowerInfo:
                     ShowPowerInfo();
+                    break;
+                case InteractableType.TouchCapacitor:
+                    TouchCapacitorAction();
                     break;
             }
         }
@@ -117,6 +126,22 @@ public class InteractableDialogue : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.EnterDialogue("powerTrivia.Introduction");
         MarkAsVisited();
     }
+    
+    private void TouchCapacitorAction()
+    {
+        if (!targetCapacitor)
+        {
+            return;
+        }
+
+        if (restartIfAlreadySpawning)
+            targetCapacitor.ResetAndStart();
+        else if (!targetCapacitor.IsSpawning)
+            targetCapacitor.StartSpawning();
+
+        MarkAsVisited();
+        if (dialoguePanel) dialoguePanel.SetActive(false);
+    }
 
     private void MarkAsVisited()
     {
@@ -127,6 +152,5 @@ public class InteractableDialogue : MonoBehaviour
                 floatingUI.SetColor(visitedColor);
         }
     }
-
 }
 

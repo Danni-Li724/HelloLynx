@@ -7,7 +7,7 @@ public class MikeyMinigameController : MinigameControllerBase
     public GameObject startButton;
     public GameObject gameStartPanel;
     
-    private void OnEnable()
+    private void Awake()
     {
         HookStartButtonToDialogue();
     }
@@ -15,13 +15,29 @@ public class MikeyMinigameController : MinigameControllerBase
     private void HookStartButtonToDialogue()
     {
         if (startButton == null) return;
-        DialogueTest dialogueTest = FindAnyObjectByType<DialogueTest>();
-        if (dialogueTest == null) return;
+
+        // Look for the GameObject by exact name
+        GameObject go = GameObject.Find("DialogueTest");
+        if (go == null)
+        {
+            Debug.LogWarning("SuzyMinigameController: No GameObject named 'DialogueTest' found in scene.");
+            return;
+        }
+
+        // Try to get the component
+        DialogueTest dialogueTest = go.GetComponent<DialogueTest>();
+        if (dialogueTest == null)
+        {
+            Debug.LogWarning("SuzyMinigameController: GameObject 'DialogueTest' found, but no DialogueTest component attached.");
+            return;
+        }
+
+        // Hook the button
         Button button = startButton.GetComponent<Button>();
-        if(button != null)
+        if (button != null)
         {
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(dialogueTest.MikeyTestPressed);
+            button.onClick.AddListener(dialogueTest.SuzyTestPressed);
         }
     }
     protected override void BeginMinigame()

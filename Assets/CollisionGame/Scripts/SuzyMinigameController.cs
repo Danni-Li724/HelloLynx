@@ -9,7 +9,7 @@ public class SuzyMinigameController : MinigameControllerBase
     public GameObject startButton;
     public GameObject gameStartPanel;
 
-    private void OnEnable()
+    private void Awake()
     {
         HookStartButtonToDialogue();
     }
@@ -17,7 +17,7 @@ public class SuzyMinigameController : MinigameControllerBase
     private void HookStartButtonToDialogue()
     {
         if (startButton == null) return;
-        DialogueTest dialogueTest = FindAnyObjectByType<DialogueTest>();
+        DialogueTest dialogueTest = FindObjectOfType<DialogueTest>();
         if (dialogueTest == null) return;
         Button button = startButton.GetComponent<Button>();
         if(button != null)

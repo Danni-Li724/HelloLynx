@@ -257,6 +257,34 @@ EXTERNAL AwardPowerBadge()
                     That’d be overkill for 1989. # speaker: Narrator
                     ~ ExitDialogue()
                     -> DONE
-            
+
+=== powerTrivia ===
+    = Introduction
+        This switch routes power to the LCD backlight circuit: the light behind the screen that lets you play in the dark. # speaker: Narrator
+        On old handhelds, the backlight is one of the hungriest parts. Flip this on, and a DC-DC regulator boosts and smooths the voltage so the lamp gets clean power without flicker. # speaker: Narrator
+        Meanwhile, the main board still has to power Mikey and Suzy at stable logic levels—so the Lynx uses regulation and capacitors to keep the rails steady when the backlight kicks in. # speaker: Narrator
+        Wanna do a quick power quiz? # speaker: Narrator
+            + [> Light me up.] # speaker: Player
+                -> Quiz
+            + [> Maybe later.] # speaker: Player
+                ~ ExitDialogue()
+                -> DONE
+
+    = Quiz
+        Why does turning on the LCD backlight drain the battery faster on retro handhelds? # speaker: Narrator
+            + [> The backlight draws significant current, so the regulator has to supply more power.] # correct
+                Exactly. The backlight is a big load; more current out means the batteries empty sooner. Good regulation keeps the rest of the system stable. # speaker: Narrator
+                ~ AwardPowerBadge()
+                ~ ExitDialogue()
+                -> DONE
+            + [> The CPU underclocks itself and wastes energy as heat.]
+                Not quite. Underclocking usually *reduces* draw; the real hog here is the lamp’s current. # speaker: Narrator
+                ~ ExitDialogue()
+                -> DONE
+            + [> The screen turns black, so the pixels consume extra power.]
+                Nope—the backlight behind the LCD is the main power consumer, not the dark pixels. # speaker: Narrator
+                ~ ExitDialogue()
+                -> DONE
+                            
     -> DONE
     

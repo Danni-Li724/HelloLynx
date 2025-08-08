@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 759926074}
   - component: {fileID: 759926073}
   m_Layer: 5
-  m_Name: MikeyDialogueStart
+  m_Name: DialogueStartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2930,7 +2930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1527258958
 MonoBehaviour:
   m_ObjectHideFlags: 0

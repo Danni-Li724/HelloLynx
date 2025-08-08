@@ -13,6 +13,21 @@ public class PlayerInputHandler : MonoBehaviour
 
     public Vector2 MovementInput { get; private set; }
     public bool IsInteractPressed { get; private set; }
+    
+    private bool movementEnabled = true;  
+
+    public void SetMovementEnabled(bool enabled) 
+    {
+        movementEnabled = enabled;
+        if (!enabled) MovementInput = Vector2.zero;
+
+        // optional: hard-disable the action so other systems don't read it
+        if (movementAction != null)
+        {
+            if (enabled && !movementAction.enabled) movementAction.Enable();
+            if (!enabled && movementAction.enabled) movementAction.Disable();
+        }
+    }   
 
     private void Awake()
     {
@@ -61,7 +76,9 @@ public class PlayerInputHandler : MonoBehaviour
         // Read movement every frame
         if (movementAction != null)
         {
-            MovementInput = movementAction.ReadValue<Vector2>().normalized;
+            MovementInput = movementEnabled
+                ? movementAction.ReadValue<Vector2>().normalized
+                : Vector2.zero; 
         }
     }
 

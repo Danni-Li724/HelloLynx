@@ -16,7 +16,7 @@ public class GameEventsManager : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject); 
+        //DontDestroyOnLoad(gameObject); 
         dialogueEvents = new DialogueEvents();
     }
 }

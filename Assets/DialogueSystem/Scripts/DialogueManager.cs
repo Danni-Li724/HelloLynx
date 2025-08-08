@@ -47,6 +47,8 @@ public class DialogueManager : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.onSubmitPressed += SubmitPressed;
         GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += UpdateChoiceIndex;
         GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine += CanContinueToNextLine;
+        GameEventsManager.instance.dialogueEvents.onDialogueStarted += HandleDialogueStarted;
+        GameEventsManager.instance.dialogueEvents.onDialogueFinished += HandleDialogueFinished;
     }
 
     private void OnDisable()
@@ -57,7 +59,21 @@ public class DialogueManager : MonoBehaviour
             GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
             GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
             GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
+            GameEventsManager.instance.dialogueEvents.onDialogueStarted -= HandleDialogueStarted;
+            GameEventsManager.instance.dialogueEvents.onDialogueFinished -= HandleDialogueFinished;
         }
+    }
+    
+    private void HandleDialogueStarted()
+    {
+        if (PlayerInputHandler.Instance)
+            PlayerInputHandler.Instance.SetMovementEnabled(false);
+    }
+
+    private void HandleDialogueFinished() 
+    {
+        if (PlayerInputHandler.Instance)
+            PlayerInputHandler.Instance.SetMovementEnabled(true);
     }
 
     private void UpdateChoiceIndex(int choiceIndex)
@@ -80,25 +96,34 @@ public class DialogueManager : MonoBehaviour
 
     private void EnterDialogue(string knotName)
     {
-        if (dialoguePlaying)
-        {
-            return;
-        }
-
+        // if (dialoguePlaying)
+        // {
+        //     return;
+        // }
+        //
+        // dialoguePlaying = true;
+        //
+        // GameEventsManager.instance.dialogueEvents.DialogueStarted();
+        //
+        // //freeze player movement (TO BE IMPLEMENTED)
+        //
+        // if (!knotName.Equals(""))
+        // {
+        //     story.ChoosePathString(knotName);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Knot name was the empty string when entering dialogue");
+        // }
+        //
+        // ContinueOrExitStory();
         dialoguePlaying = true;
-
         GameEventsManager.instance.dialogueEvents.DialogueStarted();
 
-        //freeze player movement (TO BE IMPLEMENTED)
-
-        if (!knotName.Equals(""))
-        {
+        if (!string.IsNullOrEmpty(knotName))
             story.ChoosePathString(knotName);
-        }
         else
-        {
-            Debug.LogWarning("Knot name was the empty string when entering dialogue");
-        }
+            Debug.LogWarning("Knot name was empty when entering dialogue");
 
         ContinueOrExitStory();
     }
