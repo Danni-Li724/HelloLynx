@@ -194,5 +194,7 @@ public abstract class MinigameControllerBase : MonoBehaviour
     public virtual void ReturnToHub()
     {
         SceneManager.LoadScene("Motherboard");
+        if (PlayerInputHandler.Instance)
+            PlayerInputHandler.Instance.SetMovementEnabled(true);
     }
 }

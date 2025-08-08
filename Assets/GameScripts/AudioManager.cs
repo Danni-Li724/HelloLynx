@@ -6,10 +6,14 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource backgroundMusicSource;
     public AudioSource footstepSource;
-    
+    public AudioSource collisionSource;
+    public AudioSource cpuSource;
+
     [Header("Audio Clips")]
     public AudioClip backgroundMusic;
     public AudioClip footstepSound;
+    public AudioClip collisionMusic;
+    public AudioClip cpuMusic;
     
     [Header("Volume Settings")]
     [Range(0f, 1f)]
@@ -47,16 +51,31 @@ public class AudioManager : MonoBehaviour
             backgroundMusicSource.loop = true;
             backgroundMusicSource.playOnAwake = false;
         }
-        
+
         if (footstepSource == null)
         {
             footstepSource = gameObject.AddComponent<AudioSource>();
             footstepSource.loop = true;
             footstepSource.playOnAwake = false;
         }
+
+        if (collisionSource == null)
+        {
+            collisionSource = gameObject.AddComponent<AudioSource>();
+            collisionSource.loop = true;
+            collisionSource.playOnAwake = false;
+        }
+
+        if (cpuSource == null)
+        {
+            cpuSource = gameObject.AddComponent<AudioSource>();
+            cpuSource.loop = true;
+            cpuSource.playOnAwake = false;
+        }
+
         backgroundMusicSource.volume = musicVolume;
-        footstepSource.volume = footStepsVolume;
-        footstepSource.clip = footstepSound;
+            footstepSource.volume = footStepsVolume;
+            footstepSource.clip = footstepSound;
     }
     
     public void PlayBackgroundMusic()
@@ -75,7 +94,25 @@ public class AudioManager : MonoBehaviour
             backgroundMusicSource.Stop();
         }
     }
-    
+    public void PlayCollisionMusic()
+    {
+        if (collisionMusic != null && collisionSource != null)
+        {
+            collisionSource.clip = collisionMusic;
+            collisionSource.Play();
+        }
+    }
+
+    public void PlayCPUMusic()
+    {
+        if (cpuMusic != null && cpuSource != null)
+        {
+            cpuSource.clip = cpuMusic;
+            cpuSource.Play();
+        }
+
+    }
+
     public void PlayFootsteps()
     {
         if (footstepSound != null && footstepSource != null && !footstepSource.isPlaying)
