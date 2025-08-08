@@ -42,6 +42,14 @@ public class InkExternalFunctions
     {
         //EXIT DIALOGUE SCENE AND RETURN TO OVERWORLD
         GameEventsManager.instance.dialogueEvents.DialogueFinished();
+        suzyMinigameController = GameObject.FindObjectOfType<SuzyMinigameController>();
+        if (!suzyMinigameController) return;
+        if (suzyMinigameController)
+            suzyMinigameController.ShowStartDialogueButton();
+        mikeyMinigameController = GameObject.FindObjectOfType<MikeyMinigameController>();
+        if (!mikeyMinigameController) return;
+        if (mikeyMinigameController)
+            mikeyMinigameController.ShowStartDialogueButton();
         Debug.Log("Exit Dialogue Called from Inky JSON");
     }
 

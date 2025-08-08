@@ -140,7 +140,7 @@ public class InteractableDialogue : MonoBehaviour
             targetCapacitor.StartSpawning();
 
         MarkAsVisited();
-        if (dialoguePanel) dialoguePanel.SetActive(false);
+        // if (dialoguePanel) dialoguePanel.SetActive(false);
     }
 
     private void MarkAsVisited()

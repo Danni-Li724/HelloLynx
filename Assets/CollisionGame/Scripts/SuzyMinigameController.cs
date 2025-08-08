@@ -27,6 +27,11 @@ public class SuzyMinigameController : MinigameControllerBase
         }
     }
 
+    public void ShowStartDialogueButton()
+    {
+        if (popButton) popButton.SetActive(true);
+    }
+
     protected override void BeginMinigame()
     {
         if (collisionManager) collisionManager.BeginMinigame();

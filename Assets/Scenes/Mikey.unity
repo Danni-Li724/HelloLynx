@@ -4209,7 +4209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1626497293}
         m_TargetAssemblyTypeName: MinigameControllerBase, Assembly-CSharp
         m_MethodName: ReturnToHub
         m_Mode: 1

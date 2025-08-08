@@ -45,6 +45,11 @@ public class MikeyMinigameController : MinigameControllerBase
         if (cpuGameManager) cpuGameManager.BeginMinigame(OnCpuGameOver);
     }
 
+    public void ShowStartDialogueButton()
+    {
+        if (popButton) popButton.SetActive(true);
+    }
+
     public void BeginCPUGame()
     {
         startButton.SetActive(true);

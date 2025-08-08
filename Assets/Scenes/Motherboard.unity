@@ -588,7 +588,7 @@ Transform:
   m_GameObject: {fileID: 114291011}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.1, y: 6.2, z: 0}
+  m_LocalPosition: {x: -99.6, y: 41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2227,7 +2227,7 @@ MonoBehaviour:
   - {fileID: 1551437567}
   autoStart: 0
   spawnInterval: 2
-  maxToSpawn: 10
+  maxToSpawn: 1000
 --- !u!61 &359291104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3257,7 +3257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446102721}
   m_Layer: 0
-  m_Name: Byte'sWaypoints
+  m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   - {fileID: 1191647751}
   autoStart: 0
   spawnInterval: 2
-  maxToSpawn: 10
+  maxToSpawn: 1000
 --- !u!61 &918200562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7027,8 +7027,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundMusicSource: {fileID: 0}
   footstepSource: {fileID: 0}
+  collisionSource: {fileID: 0}
+  cpuSource: {fileID: 0}
   backgroundMusic: {fileID: 8300000, guid: 51a7b8380d2eb7943a275fdce4e690fb, type: 3}
   footstepSound: {fileID: 8300000, guid: 0b21b7e3610aa2f419ac0fe6ee468080, type: 3}
+  collisionMusic: {fileID: 0}
+  cpuMusic: {fileID: 0}
   musicVolume: 0.8
   footStepsVolume: 0.132
 --- !u!4 &1247698721
@@ -7499,7 +7503,7 @@ Transform:
   m_GameObject: {fileID: 1397151050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -2.6, z: 0}
+  m_LocalPosition: {x: 27.5, y: -14.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8803,7 +8807,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.34905648, g: 0.49482962, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -8828,7 +8832,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 80
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9942,7 +9946,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 30
+    OrthographicSize: 80
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -9990,6 +9994,9 @@ MonoBehaviour:
   playerTag: Player
   updateContinuously: 1
   vcam: {fileID: 1689897127}
+  zoomSpeed: 100
+  minSize: 20
+  maxSize: 80
 --- !u!1 &1737461802
 GameObject:
   m_ObjectHideFlags: 0
@@ -10629,7 +10636,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -6000
+  m_SortingOrder: -9000
   m_Sprite: {fileID: 21300000, guid: 461e0f6fd636df848aeee6fa543fe423, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11108,7 +11115,7 @@ Transform:
   m_GameObject: {fileID: 1976380613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.7, y: 17.7, z: 0}
+  m_LocalPosition: {x: -62.6, y: 16.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12035,6 +12042,14 @@ PrefabInstance:
     - target: {fileID: 2784407182082938571, guid: ada60add718e7d743b9e6d6ef7b915bd, type: 3}
       propertyPath: m_Name
       value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 7145518261817352315, guid: ada60add718e7d743b9e6d6ef7b915bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7145518261817352315, guid: ada60add718e7d743b9e6d6ef7b915bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7145518261817352315, guid: ada60add718e7d743b9e6d6ef7b915bd, type: 3}
       propertyPath: m_LocalPosition.x
