@@ -7,6 +7,8 @@ using System.Runtime.CompilerServices;
 
 public class DialogueManager : MonoBehaviour
 {
+    
+    public static DialogueManager Instance { get; private set; }
     [Header("Ink Story")]
     [SerializeField] private TextAsset inkJson;
 
@@ -21,6 +23,12 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
         story = new Story(inkJson.text);
         inkExternalFunctions = new InkExternalFunctions();
         inkExternalFunctions.Bind(story);
@@ -29,7 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        inkExternalFunctions.Unbind(story);
+        if (Instance == this && inkExternalFunctions != null && story != null)
+            inkExternalFunctions.Unbind(story);
     }
 
     private void Start()
@@ -38,14 +47,33 @@ public class DialogueManager : MonoBehaviour
         GameEventsManager.instance.dialogueEvents.onSubmitPressed += SubmitPressed;
         GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += UpdateChoiceIndex;
         GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine += CanContinueToNextLine;
+        GameEventsManager.instance.dialogueEvents.onDialogueStarted += HandleDialogueStarted;
+        GameEventsManager.instance.dialogueEvents.onDialogueFinished += HandleDialogueFinished;
     }
 
     private void OnDisable()
     {
-        GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
-        GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
-        GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
-        GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
+        if (GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
+        {
+            GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
+            GameEventsManager.instance.dialogueEvents.onSubmitPressed -= SubmitPressed;
+            GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
+            GameEventsManager.instance.dialogueEvents.onCanContinueToNextLine -= CanContinueToNextLine;
+            GameEventsManager.instance.dialogueEvents.onDialogueStarted -= HandleDialogueStarted;
+            GameEventsManager.instance.dialogueEvents.onDialogueFinished -= HandleDialogueFinished;
+        }
+    }
+    
+    private void HandleDialogueStarted()
+    {
+        if (PlayerInputHandler.Instance)
+            PlayerInputHandler.Instance.SetMovementEnabled(false);
+    }
+
+    private void HandleDialogueFinished() 
+    {
+        if (PlayerInputHandler.Instance)
+            PlayerInputHandler.Instance.SetMovementEnabled(true);
     }
 
     private void UpdateChoiceIndex(int choiceIndex)
@@ -68,25 +96,34 @@ public class DialogueManager : MonoBehaviour
 
     private void EnterDialogue(string knotName)
     {
-        if (dialoguePlaying)
-        {
-            return;
-        }
-
+        // if (dialoguePlaying)
+        // {
+        //     return;
+        // }
+        //
+        // dialoguePlaying = true;
+        //
+        // GameEventsManager.instance.dialogueEvents.DialogueStarted();
+        //
+        // //freeze player movement (TO BE IMPLEMENTED)
+        //
+        // if (!knotName.Equals(""))
+        // {
+        //     story.ChoosePathString(knotName);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Knot name was the empty string when entering dialogue");
+        // }
+        //
+        // ContinueOrExitStory();
         dialoguePlaying = true;
-
         GameEventsManager.instance.dialogueEvents.DialogueStarted();
 
-        //freeze player movement (TO BE IMPLEMENTED)
-
-        if (!knotName.Equals(""))
-        {
+        if (!string.IsNullOrEmpty(knotName))
             story.ChoosePathString(knotName);
-        }
         else
-        {
-            Debug.LogWarning("Knot name was the empty string when entering dialogue");
-        }
+            Debug.LogWarning("Knot name was empty when entering dialogue");
 
         ContinueOrExitStory();
     }
@@ -95,7 +132,6 @@ public class DialogueManager : MonoBehaviour
     {
         canContinueToNextLine = choice;
     }
-
     private void ContinueOrExitStory()
     {
         //make a choice (if applicable)
@@ -132,7 +168,6 @@ public class DialogueManager : MonoBehaviour
             ExitDialogue();
         }
     }
-
     private void ExitDialogue()
     {
         dialoguePlaying = false;
@@ -143,10 +178,8 @@ public class DialogueManager : MonoBehaviour
 
         story.ResetState();
     }
-
     private bool IsLineBlank(string dialogueLine)
     {
         return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("\n");
     }
-
 }

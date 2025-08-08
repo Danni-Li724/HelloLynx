@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 135114467
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7843c07577742f74184171d540deb7d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,6 +181,9 @@ MonoBehaviour:
   addressLabel: {fileID: 6661812663892236422}
   speed: 2
   trackTarget: {fileID: 0}
+  waypoints: []
+  currentWaypointIndex: 0
+  movingForward: 1
 --- !u!61 &7761229690988961654
 BoxCollider2D:
   m_ObjectHideFlags: 0

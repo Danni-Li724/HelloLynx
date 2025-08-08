@@ -2784,7 +2784,7 @@ namespace Ink.Runtime
         {
             var e = new StoryException (message);
             e.useEndLineNumber = useEndLineNumber;
-            throw e;
+                throw e;
         }
 
         public void Warning (string message)

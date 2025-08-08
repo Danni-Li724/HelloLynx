@@ -6,6 +6,31 @@ public class SuzyMinigameController : MinigameControllerBase
 {
     public CollisionManager collisionManager;
     public GameTimer gameTimer;
+    public GameObject startButton;
+    public GameObject gameStartPanel;
+
+    private void Awake()
+    {
+        HookStartButtonToDialogue();
+    }
+
+    private void HookStartButtonToDialogue()
+    {
+        if (startButton == null) return;
+        DialogueTest dialogueTest = FindObjectOfType<DialogueTest>();
+        if (dialogueTest == null) return;
+        Button button = startButton.GetComponent<Button>();
+        if(button != null)
+        {
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(dialogueTest.SuzyTestPressed);
+        }
+    }
+
+    public void ShowStartDialogueButton()
+    {
+        if (popButton) popButton.SetActive(true);
+    }
 
     protected override void BeginMinigame()
     {
@@ -16,6 +41,11 @@ public class SuzyMinigameController : MinigameControllerBase
         }
     }
 
+    public void BeginCollisionGame()
+    {
+        startButton.SetActive(true);
+        gameStartPanel.SetActive(false);
+    }
     protected override void ResetMinigame()
     {
         if (collisionManager) collisionManager.ResetMinigame();

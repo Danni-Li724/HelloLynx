@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class MainMenu : MonoBehaviour
@@ -14,6 +15,7 @@ public class MainMenu : MonoBehaviour
     public float buttonDuration = 0.8f;
     public float floatStrength = 10f;
     public float floatDuration = 1.2f;
+    public float buttonYOffset = -40f;
 
     private Vector2 leftStartPos, rightStartPos, buttonStartPos;
     private Vector2 leftEndPos, rightEndPos, buttonEndPos;
@@ -22,11 +24,12 @@ public class MainMenu : MonoBehaviour
     {
         leftEndPos = leftText.anchoredPosition;
         rightEndPos = rightText.anchoredPosition;
-        buttonStartPos = popButton.anchoredPosition;
+        buttonEndPos = popButton.anchoredPosition;
+        buttonEndPos.y += buttonYOffset;
 
         leftStartPos = leftEndPos + Vector2.left * (Screen.width + 200);
         rightStartPos = rightEndPos + Vector2.right * (Screen.width + 200);
-        buttonStartPos = buttonEndPos + Vector2.up * (Screen.width + 200);
+        buttonStartPos = buttonEndPos + Vector2.up * (Screen.width + 80);
         
         leftText.anchoredPosition = leftStartPos;
         rightText.anchoredPosition = rightStartPos;
@@ -48,5 +51,10 @@ public class MainMenu : MonoBehaviour
                 popButton.DOAnchorPosY(buttonEndPos.y + floatStrength, floatDuration).SetEase(Ease.InOutSine)
                     .SetLoops(-1, LoopType.Yoyo);
             });
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Motherboard");
     }
 }

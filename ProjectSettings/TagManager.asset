@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Girl
+  - Byte
   layers:
   - Default
   - TransparentFX
@@ -49,8 +50,14 @@ TagManager:
   - name: Byte
     uniqueID: 135114467
     locked: 0
-  - name: New Layer 3
+  - name: Dock
     uniqueID: 1138929969
+    locked: 0
+  - name: DockFront
+    uniqueID: 3636314595
+    locked: 0
+  - name: ByteUI
+    uniqueID: 403249423
     locked: 0
   m_RenderingLayers:
   - Default

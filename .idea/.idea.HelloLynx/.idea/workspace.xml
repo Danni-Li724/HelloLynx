@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="" />
+=======
+    <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/Events/GameEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/Events/GameEventsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/UI/DialogueUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/Capacitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/Capacitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Lofi.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Lofi.wav.meta" beforeDir="false" />
+    </list>
+>>>>>>> 4d9ef8d6925cb53a2aa25fe73bb6cfdb08e16745
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +36,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CPUGame/MikeyMinigameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/DialogueSessionData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameScripts/FrontLayerTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -91,6 +113,8 @@
       <workItem from="1754398885071" duration="3356000" />
       <workItem from="1754479460053" duration="3957000" />
       <workItem from="1754484418753" duration="73000" />
+      <workItem from="1754567068107" duration="8580000" />
+      <workItem from="1754613851328" duration="6653000" />
     </task>
     <servers />
   </component>
