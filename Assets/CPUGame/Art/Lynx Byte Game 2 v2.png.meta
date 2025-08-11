@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 7c6fa50b885ca414f9158a53b653ca19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7298361320595808108
+    second: Lynx Byte Game 2 v2_0
+  - first:
+      213: -6250871570702167832
+    second: Lynx Byte Game 2 v2_1
+  - first:
+      213: -5342564027492957945
+    second: Lynx Byte Game 2 v2_2
+  - first:
+      213: -4543744918360948314
+    second: Lynx Byte Game 2 v2_3
+  - first:
+      213: -8183512809779513419
+    second: Lynx Byte Game 2 v2_4
+  - first:
+      213: 3193089054360902961
+    second: Lynx Byte Game 2 v2_5
+  - first:
+      213: 4255348659017596151
+    second: Lynx Byte Game 2 v2_6
+  - first:
+      213: 350760792169967466
+    second: Lynx Byte Game 2 v2_7
+  - first:
+      213: 3973676772872138533
+    second: Lynx Byte Game 2 v2_8
+  - first:
+      213: -1599872081054176999
+    second: Lynx Byte Game 2 v2_9
+  - first:
+      213: -5611852615281527685
+    second: Lynx Byte Game 2 v2_10
+  - first:
+      213: 6505761260506171998
+    second: Lynx Byte Game 2 v2_11
+  - first:
+      213: -930857460650506881
+    second: Lynx Byte Game 2 v2_12
+  - first:
+      213: 1383199730863937442
+    second: Lynx Byte Game 2 v2_13
+  - first:
+      213: -8684577276965991419
+    second: Lynx Byte Game 2 v2_14
+  - first:
+      213: 7208060412779452946
+    second: Lynx Byte Game 2 v2_15
+  - first:
+      213: -4086660290385046823
+    second: Lynx Byte Game 2 v2_16
+  - first:
+      213: -4836474248224279286
+    second: Lynx Byte Game 2 v2_17
+  - first:
+      213: 9043416677596485887
+    second: Lynx Byte Game 2 v2_18
+  - first:
+      213: -5966558505335163553
+    second: Lynx Byte Game 2 v2_19
+  - first:
+      213: 6971529763077850388
+    second: Lynx Byte Game 2 v2_20
+  - first:
+      213: 7971717080067779151
+    second: Lynx Byte Game 2 v2_21
+  - first:
+      213: 1920351375601875157
+    second: Lynx Byte Game 2 v2_22
+  - first:
+      213: -4334353347198721076
+    second: Lynx Byte Game 2 v2_23
+  - first:
+      213: 4570672207650081975
+    second: Lynx Byte Game 2 v2_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1005
+        width: 213
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f5094e3fcf84560800000000000000
+      internalID: 7298361320595808108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_1
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 868
+        width: 440
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e095bbcc617049a0800000000000000
+      internalID: -6250871570702167832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_2
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 959
+        width: 440
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7018087b2566bd5b0800000000000000
+      internalID: -5342564027492957945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 898
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a10c1f021061f0c0800000000000000
+      internalID: -4543744918360948314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 898
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7bb3625725e6e80800000000000000
+      internalID: -8183512809779513419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 898
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d9e55c391205c20800000000000000
+      internalID: 3193089054360902961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_6
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 898
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fcbd204f090e0b30800000000000000
+      internalID: 4255348659017596151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_7
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fec6205172ed400800000000000000
+      internalID: 350760792169967466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fa343b8f5552730800000000000000
+      internalID: 3973676772872138533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_9
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91963ba91dc1cc9e0800000000000000
+      internalID: -1599872081054176999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_10
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b743c4e77c1be12b0800000000000000
+      internalID: -5611852615281527685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_11
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ac7fdb56b194a50800000000000000
+      internalID: 6505761260506171998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_12
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 894
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f758769421ee413f0800000000000000
+      internalID: -930857460650506881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_13
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a79f83a3dc123310800000000000000
+      internalID: 1383199730863937442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_14
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 873
+        width: 9
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c430ebafe2a7780800000000000000
+      internalID: -8684577276965991419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_15
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 873
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a564761cc280460800000000000000
+      internalID: 7208060412779452946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_16
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d297e13e144947c0800000000000000
+      internalID: -4086660290385046823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_17
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 873
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a057445cb4461ecb0800000000000000
+      internalID: -4836474248224279286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_18
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 894
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff85bffdd8ba08d70800000000000000
+      internalID: 9043416677596485887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_19
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 880
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5579edc6a6823da0800000000000000
+      internalID: -5966558505335163553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_20
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 880
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415815df169dfb060800000000000000
+      internalID: 6971529763077850388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 709
+        width: 647
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4aaa57c27a31ae60800000000000000
+      internalID: 7971717080067779151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_22
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 729
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8bea2d66576aa10800000000000000
+      internalID: 1920351375601875157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_23
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 287
+        width: 120
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3e139589849d3c0800000000000000
+      internalID: -4334353347198721076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lynx Byte Game 2 v2_24
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 729
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bccbb9082a4e6f30800000000000000
+      internalID: 4570672207650081975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lynx Byte Game 2 v2_0: 7298361320595808108
+      Lynx Byte Game 2 v2_1: -6250871570702167832
+      Lynx Byte Game 2 v2_10: -5611852615281527685
+      Lynx Byte Game 2 v2_11: 6505761260506171998
+      Lynx Byte Game 2 v2_12: -930857460650506881
+      Lynx Byte Game 2 v2_13: 1383199730863937442
+      Lynx Byte Game 2 v2_14: -8684577276965991419
+      Lynx Byte Game 2 v2_15: 7208060412779452946
+      Lynx Byte Game 2 v2_16: -4086660290385046823
+      Lynx Byte Game 2 v2_17: -4836474248224279286
+      Lynx Byte Game 2 v2_18: 9043416677596485887
+      Lynx Byte Game 2 v2_19: -5966558505335163553
+      Lynx Byte Game 2 v2_2: -5342564027492957945
+      Lynx Byte Game 2 v2_20: 6971529763077850388
+      Lynx Byte Game 2 v2_21: 7971717080067779151
+      Lynx Byte Game 2 v2_22: 1920351375601875157
+      Lynx Byte Game 2 v2_23: -4334353347198721076
+      Lynx Byte Game 2 v2_24: 4570672207650081975
+      Lynx Byte Game 2 v2_3: -4543744918360948314
+      Lynx Byte Game 2 v2_4: -8183512809779513419
+      Lynx Byte Game 2 v2_5: 3193089054360902961
+      Lynx Byte Game 2 v2_6: 4255348659017596151
+      Lynx Byte Game 2 v2_7: 350760792169967466
+      Lynx Byte Game 2 v2_8: 3973676772872138533
+      Lynx Byte Game 2 v2_9: -1599872081054176999
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

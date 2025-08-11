@@ -19,11 +19,14 @@ public class GirlController : MonoBehaviour
     private bool isGrounded = false;
     private float lastJumpTime = 0f;
     private BoxCollider2D boxCollider;
+    private Animator animator;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
+        animator.Play("GirlWalk");
         
         // Set initial target
         if (pointA != null && pointB != null)
@@ -56,8 +59,8 @@ public class GirlController : MonoBehaviour
             {
                 if (CollisionManager.Instance != null)
                     CollisionManager.Instance.RegisterCollision(transform.position);
-
             }
+            animator.Play("GirlWalk");
         }
         
         Debug.DrawRay(rayStart, Vector2.down * groundCheckDistance, isGrounded ? Color.green : Color.red);
@@ -70,15 +73,15 @@ public class GirlController : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontalMovement, rb.linearVelocity.y);
         if (direction.x > 0)
         {
-            transform.localScale = new Vector3(.05f, 0.1f, 1);
+            transform.localScale = new Vector3(.35f, 0.35f, 1);
         }
         else if (direction.x < 0)
         {
-            transform.localScale = new Vector3(-.05f, 0.1f, 1);
+            transform.localScale = new Vector3(-.35f, 0.35f, 1);
         }
         
         float distanceToTarget = Vector3.Distance(transform.position, targetPoint);
-        if (distanceToTarget < 0.5f)
+        if (distanceToTarget < 1f)
         {
             SwitchTarget();
         }
@@ -96,6 +99,7 @@ public class GirlController : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        animator.Play("GirlJump");
     }
     
     void SwitchTarget()
