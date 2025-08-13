@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="" />
+    <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +97,7 @@
       <workItem from="1754567068107" duration="8580000" />
       <workItem from="1754613851328" duration="6653000" />
       <workItem from="1754901603381" duration="2454000" />
+      <workItem from="1755052668003" duration="1136000" />
     </task>
     <servers />
   </component>
