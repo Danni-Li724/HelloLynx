@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/1cinema.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/1cinema.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/Testing/DialogueTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/Testing/DialogueTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/NPCInteractionTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/NPCInteractionTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/AudioManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +103,7 @@
       <workItem from="1754901603381" duration="2454000" />
       <workItem from="1755052668003" duration="1136000" />
       <workItem from="1755075774060" duration="9736000" />
-      <workItem from="1755107215114" duration="1928000" />
+      <workItem from="1755107215114" duration="2098000" />
     </task>
     <servers />
   </component>

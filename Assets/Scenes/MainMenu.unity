@@ -315,7 +315,7 @@ MonoBehaviour:
   buttonDuration: 0.8
   floatStrength: 10
   floatDuration: 1.2
-  buttonYOffset: 20
+  buttonYOffset: 30
 --- !u!114 &649897721
 MonoBehaviour:
   m_ObjectHideFlags: 0

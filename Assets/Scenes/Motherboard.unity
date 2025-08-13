@@ -3041,15 +3041,15 @@ SpriteRenderer:
   m_SortingLayerID: 135114467
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3651131147663814293, guid: 8a668f481b6503540bf93f0aa6d49fbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a668f481b6503540bf93f0aa6d49fbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.15, y: 4.33}
+  m_Size: {x: 4.17, y: 4.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &515735955
@@ -4026,8 +4026,8 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Cinema
-  returnSpawnIdForThisScene: 
-  spawnId: 
+  returnSpawnIdForThisScene: Cinema
+  spawnId: Cinema
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
@@ -10242,6 +10242,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982393707}
   m_CullTransparentMesh: 1
+--- !u!1 &2012438841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012438843}
+  - component: {fileID: 2012438842}
+  m_Layer: 0
+  m_Name: CinemaSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2012438842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012438841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c876055a96bedc4468aff9b708ac8f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnId: Cinema
+--- !u!4 &2012438843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012438841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.5, y: -3.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026289426
 GameObject:
   m_ObjectHideFlags: 0
@@ -10907,7 +10952,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToSort:
   - {fileID: 262021478}
-  - {fileID: 0}
   - {fileID: 830060403}
   - {fileID: 1149729589}
   - {fileID: 1236764569}
@@ -11146,6 +11190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
+      propertyPath: minigameVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7456463664382423588, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7664
@@ -11216,6 +11264,7 @@ SceneRoots:
   - {fileID: 205644676}
   - {fileID: 344623079}
   - {fileID: 53130641}
+  - {fileID: 2012438843}
   - {fileID: 1636335038}
   - {fileID: 922121535}
   - {fileID: 1938759705}

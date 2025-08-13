@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)]
     public float musicVolume;
     [Range(0f, 1f)]
+    public float minigameVolume;
+    [Range(0f, 1f)]
     public float footStepsVolume = 1f;
     
     public static AudioManager Instance { get; private set; }
@@ -75,6 +77,8 @@ public class AudioManager : MonoBehaviour
 
         backgroundMusicSource.volume = musicVolume;
             footstepSource.volume = footStepsVolume;
+            collisionSource.volume = minigameVolume;
+            cpuSource.volume = minigameVolume;
             footstepSource.clip = footstepSound;
     }
     
