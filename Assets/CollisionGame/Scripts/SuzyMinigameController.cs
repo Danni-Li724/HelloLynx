@@ -12,6 +12,8 @@ public class SuzyMinigameController : MinigameControllerBase
     private void Awake()
     {
         HookStartButtonToDialogue();
+        //AudioManager.Instance.StopBackgroundMusic();
+        AudioManager.Instance.PlayCollisionMusic();
     }
 
     private void HookStartButtonToDialogue()

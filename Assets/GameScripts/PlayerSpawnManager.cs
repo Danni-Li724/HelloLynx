@@ -21,6 +21,8 @@ public class PlayerSpawnManager : MonoBehaviour
     public void SetLastEntryPoint(string sceneName, string spawnPointId)
     {
         lastEntryPoints[sceneName] = spawnPointId;
+        Debug.Log(lastEntryPoints[sceneName]);
+        Debug.Log(spawnPointId);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

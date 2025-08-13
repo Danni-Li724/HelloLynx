@@ -17,8 +17,8 @@ EXTERNAL AwardPowerBadge()
 === suzyDialogue ===
     = FirstIntroduction
             Oh wow! Someone actually showed up! # speaker: Suzy
-            Hey there—I'm Suzy. I'm in charge of everything you see on-screen. Sprites, colors, movement, pixel collisions... I'm your one-chip animation studio! # speaker: Suzy
-            I operate at 16 MHz—four times faster than Mikey. Not that I'm bragging...Okay, maybe a little~ # speaker: Suzy
+            Hey there—! 'm Suzy. I'm in charge of everything you see on screen. Sprites, colors, movement, pixel collisions... I'm your one chip animation studio! # speaker: Suzy
+            I operate at 16 MHz - four times faster than Mikey. Not that I'm bragging...Okay, maybe a little~ # speaker: Suzy
             But enough about me! What brings you to this old motherboard? # speaker: Suzy
             + [> Honestly, this whole thing fascinates me.] # speaker: Player
                 Love that. Not many people take the time to notice what goes on inside their machines! # speaker: Suzy
@@ -49,22 +49,22 @@ EXTERNAL AwardPowerBadge()
         //CHOICE A (#0)
         + [> How do you draw sprites?] # speaker: Player
             Okay, picture this: You want a spaceship zooming across the screen. You don't just throw me an image and say "go". I need two things: # speaker: Suzy
-            1. Pixel data - the raw visual. # speaker: Suzy
-            2. A Sprite Control Block - basically a set of instructions telling me how to handle it. # speaker: Suzy
+            1. Pixel data: the raw visual. # speaker: Suzy
+            2. A Sprite Control Block: basically a set of instructions telling me how to handle it. # speaker: Suzy
             Give me those, and I'll blit that thing onto the screen buffer in no time. # speaker: Suzy
             -> Questions
         
         //CHOICE B (#1)
         + [> How does collision detection work?] # speaker: Player
             Ah, my secret sauce! I have a technique that no other consoles at my time have figured out. # speaker: Suzy
-            While I'm drawing, I also keep an eye out for overlaps. Each sprite gets a collision number - sort of like a nametag, numbered 0 to 15. # speaker: Suzy
+            While I'm drawing, I also keep an eye out for overlaps. Each sprite gets a collision number - sort of like a name tag, numbered 0 to 15. # speaker: Suzy
             If two sprites overlap, I record the highest number into something called the collision depository. You (or your game code) can check it afterward to see what hit what. And yes - this is pixel-perfect. None of that rectangle-guessing nonsense other consoles are used to. # speaker: Suzy
             -> Questions
         
         //CHOICE C (#2)
         + [> Do you have any unique tricks for processing graphics?] # speaker: Player
             Absolutely! I'm actually really well known for reusing graphics to be more efficient, I'm super proud of it. # speaker: Suzy
-            One piece of pixel data - let's say a robot - can be reused in multiple SCBs. I can draw it in different spots, scales, or colours without duplicating the actual image data. Saves memory and still looks great, Win-win! # speaker: Suzy
+            One piece of pixel data, let's say a robot, can be reused in multiple SCBs. I can draw it in different spots, scales, or colours without duplicating the actual image data. Saves memory and still looks great, Win win! # speaker: Suzy
             -> Questions
         
         //CHOICE D (#3)
@@ -73,14 +73,14 @@ EXTERNAL AwardPowerBadge()
             -> CollisionControlInstructions
         
     = CollisionControlInstructions
-        Just press the Spacebar whenever you see two objects collide on-screen.
+        Just press the SPACE BAR whenever you see two objects collide on-screen.
         Sounds simple but its quite tough! You sure you're ready? 
             + [> Sure am!] # speaker: Player
                 I love your confidence, Let's get started! # speaker: Suzy
                 ~ StartCollisionControl()
                 -> DONE
             + [> Not yet...] # speaker: Player
-                Oh, thats okay. Come back soon! # speaker: Suzy
+                Oh, that's okay. Come back soon! # speaker: Suzy
                 In the meantime, make sure you meet Mikey if you haven't already. # speaker: Suzy
                 ~ ExitDialogue()
                 -> DONE
@@ -113,19 +113,19 @@ EXTERNAL AwardPowerBadge()
     = FirstIntroduction
     Hi there. (He adjusts his glasses, looking up from his clipboard.) # speaker: Mikey
             You don't look like you're from around here. Curious visitor, huh? # speaker: Mikey
-            I'm Mikey—the main processor of the Lynx. That said, I wouldn't get very far without Suzy. She's faster, louder... and never lets me forget it. # speaker: Mikey
-            But I manage the system’s brain: logic, inputs, audio, and timing. I keep things running smoothly at 4 MHz—methodical, one cycle at a time. # speaker: Mikey
+            I'm Mikey, the main processor of the Lynx. That said, I wouldn't get very far without Suzy. She's faster, louder... and never lets me forget it. # speaker: Mikey
+            But I manage the system’s brain: logic, inputs, audio, and timing. I keep things running smoothly at 4 MHz, methodical, one cycle at a time. # speaker: Mikey
             Say, how’s your day going so far? # speaker: Mikey
             + [> Honestly? Kinda great. I’ve never seen anything like this.] # speaker: Player
                 That’s good to hear. Always nice when someone shows up with an open mind. # speaker: Mikey
                 -> Questions
-            + [> It’s cool—kinda surreal. Everything’s so... alive in here.] # speaker: Player
+            + [> It’s cool, kinda surreal. Everything’s so... alive in here.] # speaker: Player
                 I’m glad you feel that way. There’s a lot going on under the surface—literally. # speaker: Mikey
                 -> Questions
             + [> I’m just happy to learn something new.] # speaker: Player
                 That’s an excellent mindset. Curiosity is how you make the invisible visible. # speaker: Mikey
                 -> Questions
-            Honestly? My days are always productive. Busy, but satisfying. That’s the joy of structure—you always know what comes next. # speaker: Mikey
+            Honestly? My days are always productive. Busy, but satisfying. That’s the joy of structure, you always know what comes next. # speaker: Mikey
             Anyway, if you’re interested, I’ve got time for some questions. Or I can show you what I’ve been working on. # speaker: Mikey
             -> Questions
         
@@ -145,22 +145,22 @@ EXTERNAL AwardPowerBadge()
     = Questions
         //CHOICE A (#0)
         + [> How does an 8-bit CPU like you work?] # speaker = Player
-            I'm based on the 6502 family of processors. Classic architecture. I handle 8 bits of data at a time- meaning I process numbers from 0 to 255 in a single operation. # speaker: Mikey
+            I'm based on the 6502 family of processors. Classic architecture. I handle 8 bits of data at a time; meaning I process numbers from 0 to 255 in a single operation. # speaker: Mikey
             Larger numbers? More complex math? I break them down and handle them step by step. It's slower, sure, but it works. No floating point, no shortcuts. Just pure byte-by-byte logic. # speaker: Mikey
-            I operate within a 16-bit address space, which gives me 64 kilobytes of memory. That's the total memory I can access at once - for code, variables, assets, everything. # speaker: Mikey
+            I operate within a 16bit address space, which gives me 64 kilobytes of memory. That's the total memory I can access at once; for code, variables, assets, everything. # speaker: Mikey
             It sounds small by today's standards, but with proper structure and clever loading, it's enough. And we were the pioneers of our time. Suzy, for instance, knows how to reuse graphics. I myself also admire that efficiency. # speaker: Mikey
             -> Questions
         
         //CHOICE B (#1)
         + [> What kind of sound can you make?] # speaker = Player
-            I control a 4-channel sound system. Each channel plays its own waveform - like square waves, sawtooth, or noise. # speaker: Mikey
+            I control a 4 channel sound system. Each channel plays its own waveform: like square waves, sawtooth, or noise. # speaker: Mikey
             You set the pitch, volume, and length, and I handle the playback. I can even mix in digital samples, though that's more demanding. I'm no synthesizer, but I do a good job delivering clean, retro audio. # speaker: Mikey
             -> Questions
             
         //CHOICE C (#2)
         + [> What else can you do?] # speaker = Player
-            I work closely with Suzy, handling video timing - starting the screen refresh cycle, managing blanking intervals, and making sure Suzy doesn't draw mid-frame. # speaker: Mikey
-            If you've ever seen screen-tearing in a game, that's what happens when graphics and timing go out of sync. I make sure that never happens here. # speaker: Mikey
+            I work closely with Suzy, handling video timing - starting the screen refresh cycle, managing blanking intervals, and making sure Suzy doesn't draw in the middle of a frame. # speaker: Mikey
+            If you've ever seen screen tearing in a game, that's what happens when graphics and timing go out of sync. I make sure that never happens here. # speaker: Mikey
             Although I handle a lot of tasks, handling anything more than one task at a time isn't my thing especially not how modern systems do. Don't get me wrong though I do move fast, so it feels smooth. # speaker: Mikey
             I run a main loop, one task at a time: check input, update logic, refresh screen, repeat. # speaker: Mikey
             -> Questions
@@ -183,7 +183,7 @@ EXTERNAL AwardPowerBadge()
                 
 === screenTrivia ===
         = Introduction
-            This is the Lynx's screen. What you’re looking at is a TFT LCD with double-buffering. # speaker: Narrator
+            This is the Lynx's screen. What you’re looking at is a TFT LCD with double buffering. # speaker: Narrator
             Double buffering means Suzy can draw the next frame in memory while the current one is still being shown—so the screen never flickers. # speaker: Narrator
             It’s a technique still used in graphics today. # speaker: Narrator
             Ready for a quick question? # speaker: Narrator
@@ -211,8 +211,8 @@ EXTERNAL AwardPowerBadge()
     
 === ramTrivia ===
         = Introduction
-            This is the Lynx's main RAM—64 kilobytes of fast-access memory. # speaker: Narrator
-            Everything—game code, graphics, sound—must fit into this space at runtime. # speaker: Narrator
+            This is the Lynx's main RAM, which contains 64 kilobytes of fast access memory. # speaker: Narrator
+            Everything: game code, graphics, sound...must fit into this space at runtime. # speaker: Narrator
             It’s not much, but used cleverly, it’s enough to run entire worlds. # speaker: Narrator
             Want to test your memory on memory? # speaker: Narrator
                 + [> Let’s go!] # speaker: Player
@@ -221,12 +221,12 @@ EXTERNAL AwardPowerBadge()
         = Quiz
             How much RAM does the Lynx have? # speaker: Narrator
                 + [> 64 kilobytes] # correct
-                    You got it! That’s 65,536 bytes—tight quarters, but doable. # speaker: Narrator
+                    You got it! That’s 65,536 bytes: tight quarters, but doable. # speaker: Narrator
                     ~ AwardRamBadge()
                     ~ ExitDialogue()
                     -> DONE
                 + [> 1 megabyte]
-                    Too generous—this isn’t a modern system. # speaker: Narrator
+                    Too generous. This isn’t a modern system. # speaker: Narrator
                     ~ ExitDialogue()
                     -> DONE
                 + [> 128 kilobytes]
@@ -237,7 +237,7 @@ EXTERNAL AwardPowerBadge()
 === speakerTrivia ===
         = Introduction
             Tiny but mighty. The Lynx speaker can play four separate sound channels at once. # speaker: Narrator
-            Each channel plays a waveform: square, sawtooth, or even noise. Mikey mixes them in real-time. # speaker: Narrator
+            Each channel plays a waveform: square, sawtooth, or even noise. Mikey mixes them in real time. # speaker: Narrator
             Care to put your ears to the test? # speaker: Narrator
                 + [> Hit me with it.] # speaker: Player
                     -> Quiz
@@ -261,8 +261,8 @@ EXTERNAL AwardPowerBadge()
 === powerTrivia ===
     = Introduction
         This switch routes power to the LCD backlight circuit: the light behind the screen that lets you play in the dark. # speaker: Narrator
-        On old handhelds, the backlight is one of the hungriest parts. Flip this on, and a DC-DC regulator boosts and smooths the voltage so the lamp gets clean power without flicker. # speaker: Narrator
-        Meanwhile, the main board still has to power Mikey and Suzy at stable logic levels—so the Lynx uses regulation and capacitors to keep the rails steady when the backlight kicks in. # speaker: Narrator
+        On old handhelds, the backlight is one of the hungriest parts. Flip this on, and a DC/DC regulator boosts and smooths the voltage so the lamp gets clean power without flicker. # speaker: Narrator
+        Meanwhile, the main board still has to power Mikey and Suzy at stable logic levels so the Lynx uses regulation and capacitors to keep the rails steady when the backlight kicks in. # speaker: Narrator
         Wanna do a quick power quiz? # speaker: Narrator
             + [> Light me up.] # speaker: Player
                 -> Quiz
@@ -282,7 +282,7 @@ EXTERNAL AwardPowerBadge()
                 ~ ExitDialogue()
                 -> DONE
             + [> The screen turns black, so the pixels consume extra power.]
-                Nope—the backlight behind the LCD is the main power consumer, not the dark pixels. # speaker: Narrator
+                Nope. The backlight behind the LCD is the main power consumer, not the dark pixels. # speaker: Narrator
                 ~ ExitDialogue()
                 -> DONE
                             

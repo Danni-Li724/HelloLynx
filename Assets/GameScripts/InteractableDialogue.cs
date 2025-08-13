@@ -1,6 +1,9 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class InteractableDialogue : MonoBehaviour
 {
@@ -11,7 +14,8 @@ public class InteractableDialogue : MonoBehaviour
         ShowRamInfo,
         ShowSpeakerInfo,
         ShowPowerInfo,
-        TouchCapacitor
+        TouchCapacitor,
+        TouchMinion
     }
 
     [Header("UI Settings")] 
@@ -25,9 +29,11 @@ public class InteractableDialogue : MonoBehaviour
     public InteractableType interactableType;
     public string transitionSceneName;
     public string spawnId;
-    public string infoDescription;
     private bool hasBeenInteracted = false;
     public GameObject dialoguePanel;
+    public GameObject minionPanelPrefab;
+    public string minionDescription;
+
 
     private static InteractableDialogue activeInteractable;
 
@@ -88,19 +94,40 @@ public class InteractableDialogue : MonoBehaviour
                 case InteractableType.TouchCapacitor:
                     TouchCapacitorAction();
                     break;
+                case InteractableType.TouchMinion:
+                    TouchMinionAction();
+                    break;
             }
         }
+    }
+
+    private void TouchMinionAction()
+    {
+        StartCoroutine(ShowMinionPanel());
+    }
+
+    private IEnumerator ShowMinionPanel()
+    {
+        Vector3 offset = Vector3.up * 2f;
+       GameObject minionPanel = Instantiate(minionPanelPrefab, transform.position, Quaternion.identity);
+       Text minionText = minionPanel.GetComponentInChildren<Text>();
+       minionText.text = minionDescription;
+       minionPanel.transform.SetParent(this.transform);
+       minionPanel.transform.position = this.transform.position + offset;
+       yield return new WaitForSeconds(8f);
+       Destroy(minionPanel);
     }
 
     private void TransitionToScene()
     {
         PlayerSpawnManager.Instance.SetLastEntryPoint(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
+           SceneManager.GetActiveScene().name,
             spawnId
         );
-        Debug.Log(spawnId);
+        Debug.Log(name + " Get active scene"); 
+        Debug.Log((spawnId) + " Get spawn id");
         NPCInteractionTracker.Instance.SetUpcomingNPC(gameObject.name);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(transitionSceneName);
+        SceneManager.LoadScene(transitionSceneName);
     }
 
     private void ShowScreenInfo()

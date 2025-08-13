@@ -40,6 +40,7 @@ public abstract class MinigameControllerBase : MonoBehaviour
     {
         // If arriving from another scene, refs might be missing -> rebind lazily
         RebindIfMissing();
+        InitReturnButton();
     }
 
     protected virtual void OnDestroy()
@@ -52,6 +53,7 @@ public abstract class MinigameControllerBase : MonoBehaviour
         // New scene loaded: rebind scene refs if they’re missing
         RebindIfMissing();
         InitPopButton(); // popButton might be different per scene
+        InitReturnButton();
     }
 
     private void RebindIfMissing()
@@ -98,6 +100,15 @@ public abstract class MinigameControllerBase : MonoBehaviour
 
         startAnchoredPos = rectTransform.anchoredPosition;
         originalScale = rectTransform.localScale;
+    }
+
+    private void InitReturnButton()
+    {
+        if (!returnButtonObj) return;
+        Button returnButton = returnButtonObj.GetComponent<Button>();
+        //AudioManager audioManager = FindByNameInActiveScene("AudioManager").GetComponent<AudioManager>();
+        returnButton.onClick.AddListener(AudioManager.Instance.PlayBackgroundMusic);
+        
     }
 
     protected virtual void Start()

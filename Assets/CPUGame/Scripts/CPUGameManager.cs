@@ -49,6 +49,7 @@ public class CPUGameManager : MonoBehaviour
     {
         //timeLeft = totalGameTime;
         UpdateTimerUI();
+        SpawnByte();
     }
     private void Update()
     {

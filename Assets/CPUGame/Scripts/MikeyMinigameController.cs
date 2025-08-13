@@ -10,6 +10,8 @@ public class MikeyMinigameController : MinigameControllerBase
     private void Awake()
     {
         HookStartButtonToDialogue();
+        //AudioManager.Instance.StopBackgroundMusic();
+        AudioManager.Instance.PlayCPUMusic();
     }
 
     private void HookStartButtonToDialogue()

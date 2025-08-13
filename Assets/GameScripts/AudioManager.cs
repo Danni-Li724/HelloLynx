@@ -80,6 +80,8 @@ public class AudioManager : MonoBehaviour
     
     public void PlayBackgroundMusic()
     {
+        StopCollisionMusic();
+        StopCPUMusic();
         if (backgroundMusic != null && backgroundMusicSource != null)
         {
             backgroundMusicSource.clip = backgroundMusic;
@@ -96,6 +98,7 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayCollisionMusic()
     {
+        StopBackgroundMusic();
         if (collisionMusic != null && collisionSource != null)
         {
             collisionSource.clip = collisionMusic;
@@ -105,6 +108,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayCPUMusic()
     {
+        StopBackgroundMusic();
         if (cpuMusic != null && cpuSource != null)
         {
             cpuSource.clip = cpuMusic;
@@ -112,6 +116,26 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+    
+    public void StopCollisionMusic()
+    {
+        if (collisionMusic != null && collisionSource != null)
+        {
+            collisionSource.clip = collisionMusic;
+            collisionSource.Stop();
+        }
+    }
+
+    public void StopCPUMusic()
+    {
+        if (cpuMusic != null && cpuSource != null)
+        {
+            cpuSource.clip = cpuMusic;
+            cpuSource.Stop();
+        }
+
+    }
+
 
     public void PlayFootsteps()
     {

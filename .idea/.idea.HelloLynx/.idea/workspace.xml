@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Art/RAMSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Art/RAMSlot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/MikeyMinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SuzyMinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/cb/e7f1a6b7/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/71119615d44348f087b10ce3c1671c8446ae00/c1/2a5ba80d/Dictionary`2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameScripts/CapacitorTracker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/DialogueSessionData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/FrontLayerTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,18 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.4f1\Editor\Unity.exe" />
@@ -63,16 +82,24 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19168">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="19168" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list>
+          <MonoRuntime />
+        </list>
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -98,6 +125,7 @@
       <workItem from="1754613851328" duration="6653000" />
       <workItem from="1754901603381" duration="2454000" />
       <workItem from="1755052668003" duration="1136000" />
+      <workItem from="1755075774060" duration="9736000" />
     </task>
     <servers />
   </component>
