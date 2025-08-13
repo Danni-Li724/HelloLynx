@@ -45,6 +45,7 @@ public class SuzyMinigameController : MinigameControllerBase
 
     public void BeginCollisionGame()
     {
+        NPCInteractionTracker.Instance?.MarkVisited("Suzy"); 
         startButton.SetActive(true);
         gameStartPanel.SetActive(false);
     }

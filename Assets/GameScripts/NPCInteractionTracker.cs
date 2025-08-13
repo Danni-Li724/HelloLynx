@@ -5,33 +5,25 @@ using System;
 public class NPCInteractionTracker : MonoBehaviour
 {
     public static NPCInteractionTracker Instance { get; private set; }
-    private HashSet<string> talkedToNpcs = new HashSet<string>();
-    private string upcomingNpc;
-    
-    // events for jamie
-    public event Action<string> OnNpcTalkedTo;
+    private readonly HashSet<string> visited = new HashSet<string>();
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance && Instance != this) Destroy(gameObject);
-        else {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        if (Instance && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void SetUpcomingNPC(string npcId)
+    public void MarkVisited(string npcKey)
     {
-        upcomingNpc = npcId;
+        if (string.IsNullOrWhiteSpace(npcKey)) return;
+        visited.Add(npcKey);
     }
-    public string GetUpcomingNPC() => upcomingNpc;
 
-    public void RegisterTalkedTo(string npcId)
+    public bool HasVisited(string npcKey)
     {
-        if (talkedToNpcs.Add(npcId))
-            OnNpcTalkedTo?.Invoke(npcId);
+        return !string.IsNullOrWhiteSpace(npcKey) && visited.Contains(npcKey);
     }
-    public bool HasTalkedTo(string npcId) => talkedToNpcs.Contains(npcId);
 }
 
 /// Example Code for you Jamie:

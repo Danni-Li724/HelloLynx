@@ -20,7 +20,7 @@ public class InteractableDialogue : MonoBehaviour
 
     [Header("UI Settings")] 
     public Color unvistedColor = Color.yellow;
-    public Color visitedColor = Color.green;
+    public Color visitedColor = Color.white;
     private FloatingUI floatingUI;
     
     [Header("Interactable Settings")]
@@ -28,11 +28,15 @@ public class InteractableDialogue : MonoBehaviour
     public bool restartIfAlreadySpawning = false;
     public InteractableType interactableType;
     public string transitionSceneName;
+    public string returnSpawnIdForThisScene;
     public string spawnId;
     private bool hasBeenInteracted = false;
     public GameObject dialoguePanel;
     public GameObject minionPanelPrefab;
     public string minionDescription;
+    
+    [Header("NPC")]
+    [SerializeField] private string npcKey;
 
 
     private static InteractableDialogue activeInteractable;
@@ -120,13 +124,19 @@ public class InteractableDialogue : MonoBehaviour
 
     private void TransitionToScene()
     {
-        PlayerSpawnManager.Instance.SetLastEntryPoint(
-           SceneManager.GetActiveScene().name,
-            spawnId
-        );
-        Debug.Log(name + " Get active scene"); 
-        Debug.Log((spawnId) + " Get spawn id");
-        NPCInteractionTracker.Instance.SetUpcomingNPC(gameObject.name);
+        if (string.IsNullOrWhiteSpace(transitionSceneName))
+        {
+            Debug.LogError("[Transition] transitionSceneName is empty.");
+            return;
+        }
+
+        // We’re leaving the CURRENT scene. Tell the manager which spawn to use
+        // when we RETURN to this scene later.
+        var current = SceneManager.GetActiveScene().name;
+        PlayerSpawnManager.Instance.SetReturnSpawnForScene(current, returnSpawnIdForThisScene);
+
+        Debug.Log($"[Transition] Leaving '{current}' via '{returnSpawnIdForThisScene}' return marker, loading '{transitionSceneName}'.");
+
         SceneManager.LoadScene(transitionSceneName);
     }
 

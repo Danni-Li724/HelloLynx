@@ -268,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 53130639}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.3, y: -9.5, z: 0}
+  m_LocalPosition: {x: 93.3, y: -30.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -966,10 +966,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 6
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 2010022514440185260, guid: 12b2ac97ca423d7478a50588527b833c, type: 3}
   minionDescription: I am a byte!
+  npcKey: 
 --- !u!114 &197167043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,10 +1464,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Suzy
+  returnSpawnIdForThisScene: Suzy
   spawnId: Suzy
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: Suzy
 --- !u!114 &276688519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,7 +1679,7 @@ Transform:
   m_GameObject: {fileID: 344623077}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.8, y: -18.5, z: 0}
+  m_LocalPosition: {x: 43.9, y: -43.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1941,10 +1945,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &383714672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,10 +2166,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 4
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &399685186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,10 +2860,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 2
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &507095462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,7 +3049,7 @@ SpriteRenderer:
   m_Size: {x: 4.15, y: 4.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &515735955
@@ -3422,10 +3432,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 6
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 2010022514440185260, guid: 12b2ac97ca423d7478a50588527b833c, type: 3}
   minionDescription: I am a byte!
+  npcKey: 
 --- !u!114 &695445670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3714,10 +3726,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &754342818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4012,10 +4026,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Cinema
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &761796123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4099,10 +4115,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &780279337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4286,10 +4304,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 1
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &798009405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7585,10 +7605,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 0
   transitionSceneName: Mikey
+  returnSpawnIdForThisScene: Mikey
   spawnId: Mikey
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: Mikey
 --- !u!1 &1478510157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10361,10 +10383,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 5
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &2032753693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10948,10 +10972,12 @@ MonoBehaviour:
   restartIfAlreadySpawning: 0
   interactableType: 3
   transitionSceneName: 
+  returnSpawnIdForThisScene: 
   spawnId: 
   dialoguePanel: {fileID: 653540460}
   minionPanelPrefab: {fileID: 0}
   minionDescription: 
+  npcKey: 
 --- !u!114 &2140448888
 MonoBehaviour:
   m_ObjectHideFlags: 0

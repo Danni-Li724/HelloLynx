@@ -80,7 +80,6 @@ public class PlayerInputHandler : MonoBehaviour
                 ? movementAction.ReadValue<Vector2>().normalized
                 : Vector2.zero; 
         }
-        Debug.Log(movementEnabled);
     }
 
     private void OnInteractPerformed(InputAction.CallbackContext context)

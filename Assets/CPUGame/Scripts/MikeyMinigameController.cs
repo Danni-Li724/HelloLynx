@@ -39,7 +39,7 @@ public class MikeyMinigameController : MinigameControllerBase
         if (button != null)
         {
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(dialogueTest.SuzyTestPressed);
+            button.onClick.AddListener(dialogueTest.MikeyTestPressed);
         }
     }
     protected override void BeginMinigame()
@@ -54,6 +54,7 @@ public class MikeyMinigameController : MinigameControllerBase
 
     public void BeginCPUGame()
     {
+        NPCInteractionTracker.Instance?.MarkVisited("Mikey");
         startButton.SetActive(true);
         gameStartPanel.SetActive(false);
     }

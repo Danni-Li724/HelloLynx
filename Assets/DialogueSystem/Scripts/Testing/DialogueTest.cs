@@ -4,11 +4,28 @@ public class DialogueTest : MonoBehaviour
 {
     public void MikeyTestPressed()
     {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("mikeyDialogue.FirstIntroduction");
+        StartNPCDialogue(
+            npcKey: "Mikey",
+            introKnot: "mikeyDialogue.FirstIntroduction",
+            returnKnot: "mikeyDialogue.ReturningIntroduction"
+        );
     }
 
     public void SuzyTestPressed()
     {
-        GameEventsManager.instance.dialogueEvents.EnterDialogue("suzyDialogue.FirstIntroduction");
+        StartNPCDialogue(
+            npcKey: "Suzy",
+            introKnot: "suzyDialogue.FirstIntroduction",
+            returnKnot: "suzyDialogue.ReturningIntroduction"
+        );
+    }
+
+    private void StartNPCDialogue(string npcKey, string introKnot, string returnKnot)
+    {
+        bool returning = NPCInteractionTracker.Instance != null &&
+                         NPCInteractionTracker.Instance.HasVisited(npcKey);
+
+        string knot = returning ? returnKnot : introKnot;
+        GameEventsManager.instance.dialogueEvents.EnterDialogue(knot);
     }
 }

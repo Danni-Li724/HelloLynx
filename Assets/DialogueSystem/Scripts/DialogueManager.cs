@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private bool dialoguePlaying = false;
 
     private InkExternalFunctions inkExternalFunctions;
+    private string currentNpcKey;
 
 
     private void Awake()
@@ -64,6 +65,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
+    
+    public void SetCurrentNPC(string npcKey) 
+    {
+        currentNpcKey = npcKey;
+        // Debug.Log($"DialogueManager: current NPC set to {currentNpcKey}");
+    }
     private void HandleDialogueStarted()
     {
         if (PlayerInputHandler.Instance)
@@ -74,6 +81,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (PlayerInputHandler.Instance)
             PlayerInputHandler.Instance.SetMovementEnabled(true);
+        if (!string.IsNullOrWhiteSpace(currentNpcKey))
+        {
+            NPCInteractionTracker.Instance?.MarkVisited(currentNpcKey);
+            // Debug.Log($"Marked visited on dialogue finish: {currentNpcKey}");
+            currentNpcKey = null; // reset
+        }
     }
 
     private void UpdateChoiceIndex(int choiceIndex)
