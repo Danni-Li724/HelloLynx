@@ -23,5 +23,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 36ab2386997d25f47bc44ab0c3abd248, type: 3}
   - badgeType: 4
     sprite: {fileID: 21300000, guid: 5b8512e6a8719fb42b622e86386a5b40, type: 3}
-  - badgeType: 5
-    sprite: {fileID: 8109530823814316509, guid: b6543c7d11bcb414b9b7cf3ccf220f25, type: 3}
+  - badgeType: 2
+    sprite: {fileID: 21300000, guid: 9133cc6f55fa2fb48873998659c58d8f, type: 3}
+  - badgeType: 0
+    sprite: {fileID: 21300000, guid: de0f86401ca360745bab3a5ebc16a71d, type: 3}
