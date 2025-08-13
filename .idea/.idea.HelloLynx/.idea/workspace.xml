@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/BytePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/BytePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/BadgeSprites.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/BadgeSprites.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/VideoPlaylistUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/VideoPlaylistUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Motherboard/LynxVideos.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Motherboard/LynxVideos.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cinema.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cinema.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

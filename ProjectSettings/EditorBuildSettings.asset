@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mikey.unity
     guid: 144941e5331ed3443a042005f03bab7e
+  - enabled: 1
+    path: Assets/Scenes/Cinema.unity
+    guid: f30126e7ed77adf4587ec6b2a0400efe
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b52fdb5eaa15af94abd4a630b22b125b, type: 3}
   m_UseUCBPForAssetBundles: 0

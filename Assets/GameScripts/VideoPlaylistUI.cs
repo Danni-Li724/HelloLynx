@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class VideoPlaylistUI : MonoBehaviour
 {
     [Header("References")]
@@ -40,5 +40,10 @@ public class VideoPlaylistUI : MonoBehaviour
     private void UpdateTitle(string title)
     {
         if (titleLabel != null) titleLabel.text = title;
+    }
+
+    public void ReturnToHub()
+    {
+        SceneManager.LoadScene("Motherboard");
     }
 }
