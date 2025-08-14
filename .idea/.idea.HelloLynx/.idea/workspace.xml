@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/RAMSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/RAMSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/SlotInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/SlotInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/PlayerSpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EndGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EndGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,7 @@
       <workItem from="1755052668003" duration="1136000" />
       <workItem from="1755075774060" duration="9736000" />
       <workItem from="1755107215114" duration="3323000" />
-      <workItem from="1755149455865" duration="2779000" />
+      <workItem from="1755149455865" duration="5181000" />
     </task>
     <servers />
   </component>

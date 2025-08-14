@@ -510,7 +510,7 @@ MonoBehaviour:
   - {fileID: 774828135}
   defaultFadeIn: 0.6
   defaultSlideDuration: 0.8
-  defaultHold: 3
+  defaultHold: 2.5
   defaultFadeOut: 0.5
   slideCurve:
     serializedVersion: 2
@@ -575,7 +575,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4283843, g: 0.5471698, b: 0.3948914, a: 0}
+  m_BackGroundColor: {r: 0.2963517, g: 0.7075472, b: 0.19023673, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
