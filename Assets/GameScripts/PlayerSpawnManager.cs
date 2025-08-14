@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayerSpawnManager : MonoBehaviour
 {
    public static PlayerSpawnManager Instance { get; private set; }
-
-    // Key: scene name -> spawnId to use WHEN that scene loads
     private readonly Dictionary<string, string> sceneSpawnMap =
         new Dictionary<string, string>(System.StringComparer.OrdinalIgnoreCase);
 
@@ -29,13 +27,6 @@ public class PlayerSpawnManager : MonoBehaviour
         if (Instance == this)
             SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-
-    /// <summary>
-    /// Set the spawn to use the NEXT TIME the given scene loads.
-    /// Example: leaving "Motherboard" via the Mikey portal:
-    ///   SetReturnSpawnForScene("Motherboard", "Mikey");
-    /// Then when Motherboard loads again, we'll use its "Mikey" spawn.
-    /// </summary>
     public void SetReturnSpawnForScene(string sceneNameToReturnTo, string spawnPointIdInThatScene)
     {
         if (string.IsNullOrWhiteSpace(sceneNameToReturnTo))
@@ -48,10 +39,6 @@ public class PlayerSpawnManager : MonoBehaviour
         sceneSpawnMap[sceneNameToReturnTo] = id;
         Debug.Log($"[SpawnSet-Return] '{sceneNameToReturnTo}' <- '{id}'");
     }
-
-    /// <summary>
-    /// Optional helper: set a return spawn for the current scene, then load the next scene.
-    /// </summary>
     public void LoadSceneAndRememberReturn(string nextSceneName, string returnToCurrentSceneSpawnId)
     {
         var current = SceneManager.GetActiveScene().name;
@@ -67,16 +54,10 @@ public class PlayerSpawnManager : MonoBehaviour
     private IEnumerator PlacePlayerWhenReady(Scene scene)
     {
         string sceneName = scene.name;
-
-        // Look up the intended spawn for THIS scene
         string spawnId = sceneSpawnMap.TryGetValue(sceneName, out var s) ? s : "Default";
         Debug.Log($"[SpawnLookup] Using spawnId '{spawnId}' for scene '{sceneName}'.");
-
-        // Wait a couple frames so Player + spawn points exist
         yield return null;
         yield return null;
-
-        // Find Player (retry briefly)
         GameObject player = null;
         float timeout = 1.0f;
         float elapsed = 0f;
@@ -93,8 +74,6 @@ public class PlayerSpawnManager : MonoBehaviour
             Debug.LogWarning($"[Spawn] Player not found in scene '{sceneName}'.");
             yield break;
         }
-
-        // Find spawn points IN THIS SCENE (including inactive)
         var allSpawnPoints = Resources.FindObjectsOfTypeAll<PlayerSpawnPoint>();
         var sceneSpawnPoints = new List<PlayerSpawnPoint>();
         foreach (var sp in allSpawnPoints)
@@ -125,13 +104,8 @@ public class PlayerSpawnManager : MonoBehaviour
 
         player.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
         Debug.Log($"[Spawn] Placed Player at '{spawnId}' in scene '{sceneName}'.");
-
-        // Optional re-affirm in case another script moves Player on Start
         yield return null;
         player.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
         Debug.Log($"[Spawn] Re-affirmed Player at '{spawnId}' after one frame.");
-
-        // Optional: clear once used so it doesn't stick forever
-        // sceneSpawnMap.Remove(sceneName);
     }
 }

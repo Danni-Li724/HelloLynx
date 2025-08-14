@@ -26,7 +26,7 @@ public class CPUGameManager : MonoBehaviour
     public Transform redLineTrigger;  
     private bool hogged = false;  // if something is sitting over the red line
     private float hogTimer = 0f;  // Countdown before punishing the player
-    private const float HOG_DURATION = 5f; // How long a byte can hog the line before it's a problem
+    private const float HOG_DURATION = 5f; 
     
     private Action<bool> onGameOverCallback;
 
@@ -146,13 +146,9 @@ public class CPUGameManager : MonoBehaviour
 
     void SpawnByte()
     {
-        // Make a new random address for the byte
         string address = GenerateRandomAddress();
         Debug.Log($"[SpawnByte] Generated address: {address}");
-
-        // Create a new byte at the spawn point
         GameObject byteObj = Instantiate(bytePrefab, spawnPoint.position, Quaternion.identity);
-        // Give it its target address and tracking target
         BytePacket packet = byteObj.GetComponent<BytePacket>();
         packet.targetAddress = address;
         //packet.trackTarget = trackTargets[Random.Range(0, trackTargets.Length)];
@@ -160,14 +156,11 @@ public class CPUGameManager : MonoBehaviour
         packet.currentWaypointIndex = 0;
         packet.movingForward = true;
         Debug.Log($"[SpawnByte] BytePacket targetAddress set to: {packet.targetAddress}");
-
-        // Keep track of the byte so we can monitor it
         trackQueue.Enqueue(byteObj);
     }
 
     string GenerateRandomAddress()
     {
-        // Pick a random row and column, return it as a string like "b12"
         string[] rowLabels = { "a", "b", "c", "d" };
         string rowLabel = rowLabels[Random.Range(0, 4)];
         int columnNumber = Random.Range(1, 17);
@@ -179,8 +172,6 @@ public class CPUGameManager : MonoBehaviour
     void CheckTrackHog()
     {
         int overLine = 0;
-
-        // See how many bytes are past the red line
         foreach (GameObject obj in trackQueue)
         {
             if (obj == null) continue;
