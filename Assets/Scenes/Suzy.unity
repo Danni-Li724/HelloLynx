@@ -3732,6 +3732,7 @@ MonoBehaviour:
   startButtonObj: {fileID: 1605784004}
   tryAgainButtonObj: {fileID: 1891534988}
   returnButtonObj: {fileID: 714974512}
+  returnButtonObj2: {fileID: 1293090921}
   resultText: {fileID: 1538382099}
   popButton: {fileID: 1025684658}
   popScale: 1.2

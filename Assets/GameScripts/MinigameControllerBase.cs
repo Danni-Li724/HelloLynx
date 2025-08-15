@@ -12,6 +12,7 @@ public abstract class MinigameControllerBase : MonoBehaviour
     public GameObject startButtonObj;
     public GameObject tryAgainButtonObj;
     public GameObject returnButtonObj;
+    public GameObject returnButtonObj2;
     public Text resultText;
 
     [Header("Pop Button")] 
@@ -104,10 +105,11 @@ public abstract class MinigameControllerBase : MonoBehaviour
 
     private void InitReturnButton()
     {
-        if (!returnButtonObj) return;
+        if (!returnButtonObj || !returnButtonObj2) return;
         Button returnButton = returnButtonObj.GetComponent<Button>();
-        //AudioManager audioManager = FindByNameInActiveScene("AudioManager").GetComponent<AudioManager>();
         returnButton.onClick.AddListener(AudioManager.Instance.PlayBackgroundMusic);
+        Button returnButton2 = returnButtonObj2.GetComponent<Button>();
+        returnButton2.onClick.AddListener(AudioManager.Instance.PlayBackgroundMusic);
         
     }
 

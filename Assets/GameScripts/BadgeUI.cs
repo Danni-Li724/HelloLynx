@@ -5,6 +5,7 @@ using DG.Tweening;
 public class BadgeUI : MonoBehaviour
 {
    public GameObject badgePanel;
+   public GameObject tutorialPanel;
     public Button badgeButton;
     public Transform badgeListParent;
     public GameObject badgeIconPrefab;
@@ -49,6 +50,8 @@ public class BadgeUI : MonoBehaviour
         BadgeInventory.Instance.OnBadgeEarned -= StartEarnedEffect;
         BadgeInventory.Instance.OnBadgeChecked -= StopEarnedEffect;
     }
+    
+    public void ToggleTutorial() => tutorialPanel.SetActive(!tutorialPanel.activeSelf);
 
     void ToggleBadgePanel()
     {
@@ -83,11 +86,11 @@ public class BadgeUI : MonoBehaviour
         if (!BadgeInventory.Instance.HasnewBadge()) return;
         // Loop punch scale
         punchTween = badgeButton.transform
-            .DOPunchScale(Vector3.one * 0.2f, 0.5f, 10, 1)
+            .DOPunchScale(Vector3.one * 0.2f, 1f, 10, 1)
             .SetLoops(-1, LoopType.Restart);
         // Loop color flash
         colorTween = badgeButton.image
-            .DOColor(Color.green, 0.3f)
+            .DOColor(Color.green, 0.5f)
             .SetLoops(-1, LoopType.Yoyo);
     }
 
@@ -98,5 +101,6 @@ public class BadgeUI : MonoBehaviour
         badgeButton.image.color = originalColor;
         badgeButton.transform.localScale = Vector3.one;
     }
+    
 }
 

@@ -6,13 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Scripts/InfoPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/BadgeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/BadgeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MinigameControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EndGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EndGame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/itch.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/itch.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +124,7 @@
       <workItem from="1755075774060" duration="9736000" />
       <workItem from="1755107215114" duration="3323000" />
       <workItem from="1755149455865" duration="5181000" />
+      <workItem from="1755215716117" duration="1547000" />
     </task>
     <servers />
   </component>
