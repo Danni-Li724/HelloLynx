@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.12, y: -15.55, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,9 +108,6 @@ MonoBehaviour:
   currentWaypointIndex: 0
   hopHeight: 0.5
   hopDuration: 0.3
-  popupTextPrefab: {fileID: 0}
-  popupDuration: 1
-  popupRiseDistance: 1
 --- !u!61 &1169609872167656969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +115,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6555931070253025793}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
