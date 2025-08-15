@@ -112,7 +112,7 @@ public class InteractableDialogue : MonoBehaviour
 
     private IEnumerator ShowMinionPanel()
     {
-        Vector3 offset = Vector3.up * 2f;
+        Vector3 offset = Vector3.up * 13f;
        GameObject minionPanel = Instantiate(minionPanelPrefab, transform.position, Quaternion.identity);
        Text minionText = minionPanel.GetComponentInChildren<Text>();
        minionText.text = minionDescription;
@@ -166,6 +166,7 @@ public class InteractableDialogue : MonoBehaviour
     
     private void TouchCapacitorAction()
     {
+        StartCoroutine(ShowMinionPanel());
         if (!targetCapacitor)
         {
             return;
