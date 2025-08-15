@@ -12041,9 +12041,17 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
+      propertyPath: cpuMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f525f3c1b34a4b4e938c4de81b169ee, type: 3}
+    - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
       propertyPath: musicVolume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
+      propertyPath: collisionMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cec34176e4bc6443a6b88dd4443be8c, type: 3}
     - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
       propertyPath: minigameVolume
       value: 0.1
