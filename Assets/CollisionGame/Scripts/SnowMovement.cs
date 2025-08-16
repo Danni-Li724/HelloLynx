@@ -7,15 +7,24 @@ public class SnowMovement : MonoBehaviour
     private float zigzagAmplitude;
     private float zigzagFrequency;
     private float spawnTime;
-
     private bool hasCollided = false;
+
+    private Collider2D col;
+    private SpriteRenderer sr;
+    private Color originalColor;
 
     private void Start()
     {
         zigzagAmplitude = Random.Range(0.2f, 0.5f);
         zigzagFrequency = Random.Range(1f, 3f);
         spawnTime = Time.time;
-        GetComponent<Collider2D>().isTrigger = true;
+
+        col = GetComponent<Collider2D>();
+        if (col) col.isTrigger = true;
+
+        sr = GetComponent<SpriteRenderer>();
+        if (sr == null) sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) originalColor = sr.color;
     }
 
     private void Update()
@@ -29,20 +38,49 @@ public class SnowMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hasCollided) return;
+        if (!other.CompareTag("Ground") && !other.CompareTag("Girl")) return;
 
-        if (other.CompareTag("Ground") || other.CompareTag("Girl"))
+        hasCollided = true;
+        if (col) col.enabled = false; // prevent duplicate triggers
+
+        // Register THIS sprite with the manager; manager decides success/miss & destruction
+        if (CollisionManager.Instance != null)
         {
-            hasCollided = true;
-            Debug.Log($"Snow collided with: {other.name} [{tag}]");
-            if (CollisionManager.Instance != null)
-                CollisionManager.Instance.RegisterCollision(transform.position);
-            StartCoroutine(DestroyAfterDelay());
+            CollisionManager.Instance.RegisterCollision(this, transform.position);
+        }
+        else
+        {
+            // Fallback: if no manager, just destroy after a moment
+            Destroy(gameObject, 0.1f);
         }
     }
 
-    private System.Collections.IEnumerator DestroyAfterDelay()
+    /// <summary>
+    /// Called by CollisionManager when player reacted in time.
+    /// </summary>
+    public void OnReactSuccess()
     {
-        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Called by CollisionManager when input window expired with no reaction.
+    /// Flashes the sprite red for 'flashDuration' seconds, then destroys.
+    /// </summary>
+    public void OnReactMissed(float flashDuration = 0.5f)
+    {
+        // Only run once even if called redundantly
+        if (!gameObject.activeInHierarchy) return;
+        StartCoroutine(FlashAndDestroy(flashDuration));
+    }
+
+    private System.Collections.IEnumerator FlashAndDestroy(float duration)
+    {
+        if (sr != null)
+        {
+            sr.color = Color.red;
+        }
+        yield return new WaitForSeconds(duration);
         Destroy(gameObject);
     }
 }

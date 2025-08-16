@@ -5,6 +5,7 @@ public class RAMSlot : MonoBehaviour
     [System.NonSerialized]
     public string slotAddress; 
     private SpriteRenderer spriteRenderer;
+    public Color baseColor;
 
     private void Awake()
     {
@@ -29,6 +30,14 @@ public class RAMSlot : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.color = Color.red;
+        }
+    }
+    
+    public void ClearHighlight()
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = baseColor;
         }
     }
     

@@ -11,9 +11,10 @@ public class AutomaticMovement : MonoBehaviour
     public bool faceDirection = true; 
     public int currentWaypointIndex = 0;
     private bool movingForward = true;
-    private void Update()
+    private void FixedUpdate()
     {
-        Move();
+        Move();                     // keep your signature
+        Physics2D.SyncTransforms(); // force collider shapes to match transforms
     }
 
     protected virtual void Move()

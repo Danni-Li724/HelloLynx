@@ -6,7 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="09429777-2a0f-4252-ae94-45852cdc0b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/PLAYER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/PLAYER.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Art/RAMSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Art/RAMSlot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/BytePacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/BytePacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/CPUGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CPUGame/Scripts/RAMSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CPUGame/Scripts/RAMSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/CollisionInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/CollisionInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/CollisionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/CollisionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/GirlController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/GirlController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SnowMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollisionGame/Scripts/SnowMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/MinionCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/MinionCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameScripts/VideoPlaylistUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/VideoPlaylistUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/PixelFonts/Born2bSportyFS SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/PixelFonts/Born2bSportyFS SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Motherboard/YSortManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Motherboard/YSortManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/AutomaticMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/AutomaticMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cinema.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cinema.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Suzy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Web Itchio.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Web Itchio.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/itch.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/itch.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/web.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/web.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +57,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "origin/nick",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;origin/nick&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../LynxTest\HelloLynx.exe" />
@@ -116,6 +142,8 @@
       <workItem from="1755215716117" duration="2827000" />
       <workItem from="1755229760721" duration="1083000" />
       <workItem from="1755254496916" duration="4290000" />
+      <workItem from="1755265724193" duration="2679000" />
+      <workItem from="1755308187493" duration="8299000" />
     </task>
     <servers />
   </component>

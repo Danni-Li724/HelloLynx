@@ -23,6 +23,8 @@ public class BytePacket : MonoBehaviour
     public Transform[] waypoints;
     public int currentWaypointIndex = 0;
     public bool movingForward = true;
+    
+    public bool IsDragging => isDragging;
 
     private void Start()
     {
@@ -34,39 +36,34 @@ public class BytePacket : MonoBehaviour
 
     private void Update()
     {
-        // Don't update if already allocated
-        if (isAllocated)
-            return;
+        if (isAllocated) return;
+
         if (!isDragging && waypoints != null && waypoints.Length > 0)
         {
+            int last = waypoints.Length - 1;
+            currentWaypointIndex = Mathf.Clamp(currentWaypointIndex, 0, last);
+
             Transform target = waypoints[currentWaypointIndex];
             transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
-            if (Vector3.Distance(transform.position, target.position) < 0.5f)
+
+            if ((transform.position - target.position).sqrMagnitude < 0.5f * 0.5f)
             {
-                // if we want to loop waypoints?
-                // if (movingForward)
-                // {
-                //     currentWaypointIndex++;
-                //     if (currentWaypointIndex >= waypoints.Length)
-                //     {
-                //         currentWaypointIndex = waypoints.Length - 2;
-                //         movingForward = true;
-                //     }
-                // }
-                // else
-                // {
-                //     currentWaypointIndex--;
-                //     if (currentWaypointIndex < 0)
-                //     {
-                //         currentWaypointIndex = 1;
-                //         movingForward = true;
-                //     }
-                // }
-                currentWaypointIndex++;
-                if(currentWaypointIndex >= waypoints.Length)
-                    currentWaypointIndex = waypoints.Length;
+                // Stop at the end (or set a flag / event)
+                if (currentWaypointIndex < last)
+                {
+                    currentWaypointIndex++;
+                }
+                else
+                {
+                    // reached final waypoint — choose your behavior:
+                    // isAllocated = true; // e.g., mark done
+                    // currentWaypointIndex = last; // stay put
+                    // OR loop: currentWaypointIndex = 0;
+                    // OR ping-pong: flip direction logic
+                }
             }
         }
+
         HandleDragInput();
     }
 
@@ -207,6 +204,35 @@ public class BytePacket : MonoBehaviour
         {
             spriteRenderer.color = Color.green;
         }
+    }
+    
+    public void FlashRedAndDestroy(float seconds)
+    {
+        StartCoroutine(FlashAndDestroyRoutine(seconds));
+    }
+
+    private IEnumerator FlashAndDestroyRoutine(float seconds)
+    {
+        // Lock interaction
+        isAllocated = true;
+        isDragging = false;
+        if (myCollider != null) myCollider.enabled = false;
+
+        // Visual: flash red
+        var sr = GetComponent<SpriteRenderer>();
+        Color original = Color.white;
+        if (sr != null)
+        {
+            original = sr.color;
+            sr.color = Color.red;
+        }
+
+        // Use realtime so this still finishes if Time.timeScale == 0
+        float endTime = Time.unscaledTime + seconds;
+        while (Time.unscaledTime < endTime)
+            yield return null;
+
+        Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

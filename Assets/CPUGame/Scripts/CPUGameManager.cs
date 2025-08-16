@@ -20,13 +20,17 @@ public class CPUGameManager : MonoBehaviour
     public Transform spawnPoint; // Where bytes spawn
     public Transform[] trackTargets;  // Random destinations for spawned bytes
     public float spawnInterval = 3f; 
+    public GameObject stallText;
 
     private float spawnTimer = 0f;  // Internal timer to keep track of spawn timing
     private Queue<GameObject> trackQueue = new(); // Queue to keep track of all active bytes
     public Transform redLineTrigger;  
     private bool hogged = false;  // if something is sitting over the red line
     private float hogTimer = 0f;  // Countdown before punishing the player
-    private const float HOG_DURATION = 5f; 
+    [SerializeField] private const float HOG_DURATION = 3f; 
+    private readonly Dictionary<GameObject, float> hogCountdowns = new();
+    private readonly Dictionary<GameObject, Vector3> lastPositions = new(); // NEW: track motion per byte
+    private const float STILLNESS_EPSILON_SQR = 0.0004f;
     
     private Action<bool> onGameOverCallback;
 
@@ -54,29 +58,30 @@ public class CPUGameManager : MonoBehaviour
     private void Update()
     {
         if (gameEnded) return;
+
         timeLeft -= Time.deltaTime;
-        if(timeLeft < 0) timeLeft = 0f;
+        if (timeLeft < 0) timeLeft = 0f;
         UpdateTimerUI();
-        
-        float t = 1 - Mathf.Clamp01(timeLeft / frequencyRampTime);
-        float currentSpawnInterval = Mathf.Lerp(minSpawnInterval, t, frequencyRampTime * t);
-        
+
+        // FIX: ramp from initial spawnInterval down to minSpawnInterval as the timer runs out
+        float t = 1f - Mathf.Clamp01(timeLeft / frequencyRampTime);
+        float currentSpawnInterval = Mathf.Lerp(spawnInterval, minSpawnInterval, t);
+
         spawnTimer += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)
+        if (spawnTimer >= currentSpawnInterval)   // <-- use the ramped value
         {
             SpawnByte();
-            spawnTimer = 0;
+            spawnTimer = 0f;
         }
-        // Check if a byte is stuck past the red line
+
         CheckTrackHog();
 
         if (mistakes >= maxMistakes && !gameEnded)
         {
-            EndGame(timerExpired: false); // Lose due to mistakes
-            return; // Make sure timer win doesn't also fire
+            EndGame(timerExpired: false);
+            return;
         }
 
-        // win or Lose by timer ---
         if (timeLeft <= 0 && !gameEnded)
         {
             EndGame(timerExpired: true);
@@ -111,8 +116,18 @@ public class CPUGameManager : MonoBehaviour
         if (scoreText) scoreText.text = "Score: 0";
         if (warningText) warningText.text = "";
         if (timerText) timerText.text = $"Time: {timeLeft:0.0}";
+        if (stallText) stallText.SetActive(false); 
+        
+        ResetAllRamSlots();
 
         enabled = true; // Enable Update loop for timer
+    }
+    
+    private void ResetAllRamSlots()
+    {
+        var slots = FindObjectsOfType<RAMSlot>(true); // include inactive
+        for (int i = 0; i < slots.Length; i++)
+            slots[i].ClearHighlight();
     }
 
     // --- Call this to retry the minigame ---
@@ -130,8 +145,7 @@ public class CPUGameManager : MonoBehaviour
         if (timerExpired)
         {
             playerWon = mistakes < maxMistakes;
-            if (warningText)
-                warningText.text = playerWon ? "You Win!" : "Game Over!";
+            if (warningText) warningText.text = playerWon ? "You Win!" : "Game Over!";
         }
         else
         {
@@ -139,8 +153,12 @@ public class CPUGameManager : MonoBehaviour
             if (warningText) warningText.text = "Game Over!";
         }
 
-        if (timerText) timerText.text = $"Time: 0.0";
-        Time.timeScale = 1f; // Reset in case it was paused
+        if (timerText) timerText.text = "Time: 0.0";
+
+        // Clean up all leftover bytes on screen
+        DestroyAllBytes();
+
+        Time.timeScale = 1f; // ensure we're unpaused for any UI flow
         onGameOverCallback?.Invoke(playerWon);
     }
 
@@ -171,49 +189,103 @@ public class CPUGameManager : MonoBehaviour
 
     void CheckTrackHog()
     {
-        int overLine = 0;
-        foreach (GameObject obj in trackQueue)
-        {
-            if (obj == null) continue;
+         bool anyCounting = false;
 
-            if (obj.transform.position.y <= redLineTrigger.position.y)
-                overLine++;
+    foreach (GameObject obj in trackQueue.ToList())
+    {
+        if (obj == null) continue;
+
+        var pkt = obj.GetComponent<BytePacket>();
+        if (pkt == null) continue;
+
+        // 1) Never punish while the player is dragging this byte
+        if (pkt.IsDragging)
+        {
+            hogCountdowns.Remove(obj);
+            lastPositions[obj] = obj.transform.position;
+            continue;
         }
 
-        if (overLine > 0)
+        // 2) Must be at/under the red line
+        if (obj.transform.position.y > redLineTrigger.position.y)
         {
-            // Start hog timer if one or more bytes are hogging the line
-            if (!hogged)
+            hogCountdowns.Remove(obj);
+            lastPositions[obj] = obj.transform.position;
+            continue;
+        }
+
+        // 3) Only count down if the byte is effectively *still*
+        Vector3 pos = obj.transform.position;
+        if (!lastPositions.TryGetValue(obj, out var prev)) prev = pos;
+
+        float movedSqr = (pos - prev).sqrMagnitude;
+        lastPositions[obj] = pos;
+
+        if (!hogCountdowns.ContainsKey(obj))
+            hogCountdowns[obj] = HOG_DURATION;
+
+        if (movedSqr <= STILLNESS_EPSILON_SQR)
+        {
+            hogCountdowns[obj] -= Time.deltaTime;
+            anyCounting = true;
+
+            if (hogCountdowns[obj] <= 0f)
             {
-                hogged = true;
-                hogTimer = HOG_DURATION;
-            }
-            else
-            {
-                hogTimer -= Time.deltaTime;
-                if (hogTimer <= 0)
-                {
-                    // Time's up — punish the player
-                    RegisterIncorrectAllocation();
-                    hogged = false;
-                }
+                RegisterIncorrectAllocation();
+
+                stallText?.SetActive(true); // optional flair at the moment of punish
+
+                var bytePkt = obj.GetComponent<BytePacket>();
+                if (bytePkt != null) bytePkt.FlashRedAndDestroy(1f); // your existing behavior
+
+                RemoveFromTrackQueue(obj);
+                hogCountdowns.Remove(obj);
+                lastPositions.Remove(obj);
             }
         }
         else
         {
-            // Reset if no bytes are over the line
-            hogged = false;
+            // Moving: reset the per-byte hog timer so it only fires after being *stationary* long enough
+            hogCountdowns[obj] = HOG_DURATION;
         }
+    }
+
+    // Show/hide global stall label only if at least one byte is currently being timed while still
+    if (!anyCounting) stallText?.SetActive(false);
+    }
+    
+    private void RemoveFromTrackQueue(GameObject obj)
+    {
+        trackQueue = new Queue<GameObject>(trackQueue.Where(x => x != null && x != obj));
+    }
+
+    private void DestroyAllBytes()
+    {
+        // Destroy those we're tracking
+        foreach (var obj in trackQueue)
+            if (obj != null) Destroy(obj);
+
+        trackQueue.Clear();
+        hogCountdowns.Clear();
+        lastPositions.Clear();
+
+        // Safety: nuke any stray BytePackets not in the queue (e.g., if something spawned outside of normal flow)
+        foreach (var pkt in FindObjectsOfType<BytePacket>())
+            if (pkt != null) Destroy(pkt.gameObject);
     }
 
     public void RegisterCorrectAllocation(BytePacket packet)
     {
         Debug.Log($"[RegisterCorrectAllocation] Correct allocation for address: {packet.targetAddress}");
-        // +1 to score and update UI
         score++;
-        scoreText.text = "Score: " + score;
-        // Remove the byte from the queue
-        trackQueue = new Queue<GameObject>(trackQueue.Where(x => x != packet.gameObject));
+        if (scoreText) scoreText.text = "Score: " + score;
+
+        // Remove from queue + hog tracking
+        if (packet && packet.gameObject)
+        {
+            RemoveFromTrackQueue(packet.gameObject);
+            hogCountdowns.Remove(packet.gameObject);
+        }
     }
 
     public void RegisterIncorrectAllocation()

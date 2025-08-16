@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   collisionText: {fileID: 674168338}
   scoreText: {fileID: 1207226842}
   reactionEffectPrefab: {fileID: 8787538741310983100, guid: b0bb4b4e0ed74194b9f5d5be72993fcb, type: 3}
-  inputWindow: 1
+  inputWindow: 0.6
 --- !u!4 &1179925251
 Transform:
   m_ObjectHideFlags: 0

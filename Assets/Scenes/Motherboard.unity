@@ -825,7 +825,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 520437229
+  m_SortingLayerID: 403249423
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &189762320
@@ -924,7 +924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &197167041
 Transform:
   m_ObjectHideFlags: 0
@@ -4015,7 +4015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 171}
+  m_AnchoredPosition: {x: -232.9, y: 171}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569957513
@@ -4464,7 +4464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &695445668
 Transform:
   m_ObjectHideFlags: 0
@@ -8318,7 +8318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1255872070
 Transform:
   m_ObjectHideFlags: 0
@@ -8691,7 +8691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1294740082
 Transform:
   m_ObjectHideFlags: 0
@@ -9382,7 +9382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1375486347
 Transform:
   m_ObjectHideFlags: 0
@@ -11428,8 +11428,8 @@ MonoBehaviour:
   IgnoreTimeScale: 0
   WorldUpOverride: {fileID: 0}
   ChannelMask: -1
-  UpdateMethod: 2
-  BlendUpdateMethod: 1
+  UpdateMethod: 0
+  BlendUpdateMethod: 0
   LensModeOverride:
     Enabled: 0
     DefaultMode: 2
@@ -11887,7 +11887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -12361,7 +12361,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -12570,7 +12570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -13534,7 +13534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1908380791
 Transform:
   m_ObjectHideFlags: 0
@@ -15285,7 +15285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -16065,6 +16065,10 @@ MonoBehaviour:
   - {fileID: 2079803073}
   - {fileID: 918200557}
   - {fileID: 359291099}
+  autoTrackPlayerView: 1
+  playerTag: Player
+  playerViewChildName: PlayerView
+  recheckInterval: 0.5
 --- !u!4 &2122215610
 Transform:
   m_ObjectHideFlags: 0
@@ -16318,6 +16322,10 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2cec34176e4bc6443a6b88dd4443be8c, type: 3}
     - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
       propertyPath: minigameVolume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220413709389534502, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}
+      propertyPath: footStepsVolume
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7456463664382423588, guid: 458f0c3b1a19c1f4d825351cb2c847fc, type: 3}

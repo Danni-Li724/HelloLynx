@@ -3,18 +3,33 @@ using UnityEngine.InputSystem;
 
 public class CollisionInputHandler : MonoBehaviour
 {
-    private void OnEnable()
+    private CollisionControls _input; 
+
+    private void Awake()
     {
-        var inputActions = new CollisionControls();
-        inputActions.Enable();
-        inputActions.Player.Reaction.performed += ctx => HandleReaction();
+        _input = new CollisionControls();      
     }
 
-    void HandleReaction()
+    private void OnEnable()
+    {
+        _input.Player.Reaction.performed += OnReaction; 
+        _input.Player.Enable();                        
+    }
+
+    private void OnDisable()
+    {
+        _input.Player.Reaction.performed -= OnReaction; 
+        _input.Player.Disable();                        
+    }
+
+    private void OnDestroy()
+    {
+        _input.Dispose(); 
+    }
+
+    private void OnReaction(InputAction.CallbackContext ctx)
     {
         if (CollisionManager.Instance != null)
-        {
             CollisionManager.Instance.TryReact();
-        }
     }
 }

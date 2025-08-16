@@ -7,6 +7,7 @@ public class VideoPlaylistUI : MonoBehaviour
     public VideoPlaylistController controller;
     public Button previousButton;
     public Button nextButton;
+    public Button returnButton;
     public Text titleLabel; 
 
     private void Awake()
@@ -19,6 +20,8 @@ public class VideoPlaylistUI : MonoBehaviour
     {
         if (controller != null)
             controller.onTitleChanged.AddListener(UpdateTitle);
+        if (returnButton != null)     returnButton.onClick.AddListener(AudioManager.Instance.PlayBackgroundMusic);
+        AudioManager.Instance.StopBackgroundMusic();
     }
 
     private void OnDisable()

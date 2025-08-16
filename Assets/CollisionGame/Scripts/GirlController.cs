@@ -56,10 +56,7 @@ public class GirlController : MonoBehaviour
         if (isGrounded && !wasGrounded && hit.collider.CompareTag("Ground"))
         {
             if (CollisionManager.Instance != null)
-            {
-                if (CollisionManager.Instance != null)
-                    CollisionManager.Instance.RegisterCollision(transform.position);
-            }
+                CollisionManager.Instance.RegisterCollision(null, transform.position);
             animator.Play("GirlWalk");
         }
         
