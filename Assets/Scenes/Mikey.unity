@@ -4323,7 +4323,7 @@ MonoBehaviour:
   startButtonObj: {fileID: 652875779}
   tryAgainButtonObj: {fileID: 1738229340}
   returnButtonObj: {fileID: 1992896803}
-  returnButtonObj2: {fileID: 1480608416}
+  returnButtonObj2: {fileID: 436570481}
   resultText: {fileID: 1885671581}
   popButton: {fileID: 759926071}
   popScale: 1.2

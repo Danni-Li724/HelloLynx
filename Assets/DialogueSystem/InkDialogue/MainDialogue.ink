@@ -17,7 +17,7 @@ EXTERNAL AwardPowerBadge()
 === suzyDialogue ===
     = FirstIntroduction
             Oh wow! Someone actually showed up! # speaker: Suzy
-            Hey there—! 'm Suzy. I'm in charge of everything you see on screen. Sprites, colors, movement, pixel collisions... I'm your one chip animation studio! # speaker: Suzy
+            Hey there—! I'm Suzy. I'm in charge of everything you see on screen. Sprites, colors, movement, pixel collisions... I'm your one chip animation studio! # speaker: Suzy
             I operate at 16 MHz - four times faster than Mikey. Not that I'm bragging...Okay, maybe a little~ # speaker: Suzy
             But enough about me! What brings you to this old motherboard? # speaker: Suzy
             + [> Honestly, this whole thing fascinates me.] # speaker: Player
@@ -27,8 +27,8 @@ EXTERNAL AwardPowerBadge()
                 Retro detective, huh? You’re in the right place. # speaker: Suzy
                 -> Questions
             + [> I like learning weird stuff.] # speaker: Player
-                Weird is underrated. You’ve got a good brain. I like you already ;)! # speaker: Suzy
-            You ask the right kind of questions. Curious, grounded... you’d make a decent engineer. Or artist. Or both! Want to know how I work? I promise it’s cooler than it sounds. # speaker: Suzy
+                Weird is underrated. You've got a good brain. I like you already ;)! # speaker: Suzy
+            You ask the right kind of questions. Curious, grounded... you'd make a decent engineer. Or artist. Or both! Want to know how I work? I promise it’s cooler than it sounds. # speaker: Suzy
             -> Questions
     
     = ReturningIntroduction
@@ -114,13 +114,13 @@ EXTERNAL AwardPowerBadge()
     Hi there. (He adjusts his glasses, looking up from his clipboard.) # speaker: Mikey
             You don't look like you're from around here. Curious visitor, huh? # speaker: Mikey
             I'm Mikey, the main processor of the Lynx. That said, I wouldn't get very far without Suzy. She's faster, louder... and never lets me forget it. # speaker: Mikey
-            But I manage the system’s brain: logic, inputs, audio, and timing. I keep things running smoothly at 4 MHz, methodical, one cycle at a time. # speaker: Mikey
-            Say, how’s your day going so far? # speaker: Mikey
+            But I manage the system’s brain: logic, inputs, audio, and timing. I'm a bit more methodical - I keep things running smoothly at 4 MHz, one cycle at a time. # speaker: Mikey
+            Say, how's your day going so far? # speaker: Mikey
             + [> Honestly? Kinda great. I’ve never seen anything like this.] # speaker: Player
-                That’s good to hear. Always nice when someone shows up with an open mind. # speaker: Mikey
+                That's good to hear. Always nice when someone shows up with an open mind. # speaker: Mikey
                 -> Questions
-            + [> It’s cool, kinda surreal. Everything’s so... alive in here.] # speaker: Player
-                I’m glad you feel that way. There’s a lot going on under the surface—literally. # speaker: Mikey
+            + [> It's cool, kinda surreal. Everything’s so... alive in here.] # speaker: Player
+                I’m glad you feel that way. There's a lot going on under the surface—literally. # speaker: Mikey
                 -> Questions
             + [> I’m just happy to learn something new.] # speaker: Player
                 That’s an excellent mindset. Curiosity is how you make the invisible visible. # speaker: Mikey
@@ -146,7 +146,8 @@ EXTERNAL AwardPowerBadge()
         //CHOICE A (#0)
         + [> How does an 8-bit CPU like you work?] # speaker = Player
             I'm based on the 6502 family of processors. Classic architecture. I handle 8 bits of data at a time; meaning I process numbers from 0 to 255 in a single operation. # speaker: Mikey
-            Larger numbers? More complex math? I break them down and handle them step by step. It's slower, sure, but it works. No floating point, no shortcuts. Just pure byte-by-byte logic. # speaker: Mikey
+            Larger numbers? More complex math? I break them down and handle them step by step. # speaker: Mikey
+            It's slower, sure, but it works. No floating point, no shortcuts. Just pure byte by byte logic. # speaker: Mikey
             I operate within a 16bit address space, which gives me 64 kilobytes of memory. That's the total memory I can access at once; for code, variables, assets, everything. # speaker: Mikey
             It sounds small by today's standards, but with proper structure and clever loading, it's enough. And we were the pioneers of our time. Suzy, for instance, knows how to reuse graphics. I myself also admire that efficiency. # speaker: Mikey
             -> Questions

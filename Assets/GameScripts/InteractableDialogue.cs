@@ -40,6 +40,7 @@ public class InteractableDialogue : MonoBehaviour
 
 
     private static InteractableDialogue activeInteractable;
+    private Coroutine currentMinionPanelCoroutine;
 
     void Start()
     {
@@ -107,19 +108,44 @@ public class InteractableDialogue : MonoBehaviour
 
     private void TouchMinionAction()
     {
-        StartCoroutine(ShowMinionPanel());
+        if (currentMinionPanelCoroutine == null)
+        {
+            currentMinionPanelCoroutine = StartCoroutine(ShowMinionPanel());
+        }
     }
 
     private IEnumerator ShowMinionPanel()
     {
         Vector3 offset = Vector3.up * 13f;
-       GameObject minionPanel = Instantiate(minionPanelPrefab, transform.position, Quaternion.identity);
-       Text minionText = minionPanel.GetComponentInChildren<Text>();
-       minionText.text = minionDescription;
-       minionPanel.transform.SetParent(this.transform);
-       minionPanel.transform.position = this.transform.position + offset;
-       yield return new WaitForSeconds(8f);
-       Destroy(minionPanel);
+        GameObject minionPanel = Instantiate(minionPanelPrefab, transform.position, Quaternion.identity);
+        Text minionText = minionPanel.GetComponentInChildren<Text>();
+        minionText.text = minionDescription;
+    
+        // Set parent first
+        minionPanel.transform.SetParent(this.transform);
+    
+        // Set position after parenting
+        minionPanel.transform.position = this.transform.position + offset;
+    
+        // Keep panel upright for 8 seconds
+        float timer = 0f;
+        while (timer < 8f)
+        {
+            // Force the scale to never flip - lock it to positive values
+            minionPanel.transform.localScale = new Vector3(
+                Mathf.Abs(minionPanel.transform.localScale.x), 
+                Mathf.Abs(minionPanel.transform.localScale.y), 
+                Mathf.Abs(minionPanel.transform.localScale.z)
+            );
+        
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    
+        Destroy(minionPanel);
+    
+        // Clear the reference so new panels can be spawned
+        currentMinionPanelCoroutine = null;
     }
 
     private void TransitionToScene()
