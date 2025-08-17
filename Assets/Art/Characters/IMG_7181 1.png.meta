@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a824539c04734e84e91e72b488157421
+guid: a86e276e8c581fe48a99aecc51e04f26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2917011944975897531
-    second: IMG_7094_0
+      213: 674062061182277609
+    second: IMG_7181_0
+  - first:
+      213: 7435727763402549006
+    second: IMG_7181_1
+  - first:
+      213: 5467839988425249072
+    second: IMG_7181_2
+  - first:
+      213: -7912446497435840796
+    second: IMG_7181_3
+  - first:
+      213: 4292670192461785325
+    second: IMG_7181_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_7094_0
+      name: IMG_7181_0
       rect:
         serializedVersion: 2
-        x: 508
-        y: 83
-        width: 1387
-        height: 1393
+        x: 176
+        y: 71
+        width: 216
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54ce32e4711b487d0800000000000000
-      internalID: -2917011944975897531
+      spriteID: 9e756519fdfba5900800000000000000
+      internalID: 674062061182277609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_7181_1
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 65
+        width: 188
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e076e103103013760800000000000000
+      internalID: 7435727763402549006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_7181_2
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 119
+        width: 217
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03153c6ef7ba1eb40800000000000000
+      internalID: 5467839988425249072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_7181_3
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 20
+        width: 191
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee8d0025d7513290800000000000000
+      internalID: -7912446497435840796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_7181_4
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 129
+        width: 207
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8a797ebc0a29b30800000000000000
+      internalID: 4292670192461785325
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_7094_0: -2917011944975897531
+      IMG_7181_0: 674062061182277609
+      IMG_7181_1: 7435727763402549006
+      IMG_7181_2: 5467839988425249072
+      IMG_7181_3: -7912446497435840796
+      IMG_7181_4: 4292670192461785325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
