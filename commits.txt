@@ -1,0 +1,71 @@
+final fixes, final build\t2025-08-16 22:23:48 +1000\tKwazzi724
+lmaoo\t2025-08-16 19:27:24 +1000\tKwazzi724
+fixed everything, apart from the mysterious collider offset issue in build..\t2025-08-16 15:33:31 +1000\tKwazzi724
+Adjusted Try Again button location.\t2025-08-16 00:26:03 +1000\tNW014
+Updated visuals in some parts of the game.\t2025-08-15 23:39:12 +1000\tNW014
+Added more Byte friends.\t2025-08-15 22:29:49 +1000\tNW014
+Made visual changes to the overworld scene.\t2025-08-15 22:23:51 +1000\tNW014
+Avoided legal calamity\t2025-08-15 13:33:48 +1000\tJamie Hirvonen
+final fixes, build into itchio\t2025-08-15 11:44:28 +1000\tKwazzi724
+nick's sprites added, apa7 added, temp tutorial added, game complete\t2025-08-15 10:40:18 +1000\tKwazzi724
+all buttons and menus, and title image\t2025-08-15 01:16:41 +1000\tKwazzi724
+credits!\t2025-08-14 17:20:48 +1000\tKwazzi724
+everything fixed, game has no obvious bugs now, mini games have also been configured\t2025-08-14 04:39:35 +1000\tKwazzi724
+DIALOGUE AND SCENE TRANSITION PERSISTENCE FIANLLY FIXED\t2025-08-14 04:21:18 +1000\tKwazzi724
+cinema scene added, all interactables configured\t2025-08-14 02:04:30 +1000\tKwazzi724
+UIs configured, spawn and npc tracking bugsfixed, mini games configured\t2025-08-14 01:31:57 +1000\tKwazzi724
+fixed all existing bugs (dialogue, minion texts etc)\t2025-08-13 22:02:58 +1000\tKwazzi724
+Video Player/rollerdeck done;D\t2025-08-13 13:01:48 +1000\tKwazzi724
+added videos for the rollerdeck\t2025-08-13 00:51:52 +1000\tKwazzi724
+added nick's assets for the cpu game and mine for the collision game, mini game art is done now apart from ui\t2025-08-11 20:17:55 +1000\tKwazzi724
+Merge branch 'develop' of https://github.com/Danni-Li724/HelloLynx into danni\t2025-08-08 15:06:01 +1000\tSAE1\1034231
+more fixes, popup button shows again now, can now scroll to zoom camera\t2025-08-08 15:04:44 +1000\tSAE1\1034231
+Some post-testing fixes, trying to fix dialogue line skipping again\t2025-08-08 14:58:05 +1000\tJamie Hirvonen
+player input freeze fix\t2025-08-08 13:42:33 +1000\tSAE1\1034231
+FIXES\t2025-08-08 12:48:06 +1000\tKwazzi724
+ui fixes\t2025-08-08 04:30:58 +1000\tKwazzi724
+more fixes\t2025-08-08 04:28:30 +1000\tKwazzi724
+fixed everything, added minions, game PLAYABLE NOW\t2025-08-08 04:08:49 +1000\tKwazzi724
+implemented all awards from overworld stuff, needs to hook up mikey scene\t2025-08-08 02:06:39 +1000\tKwazzi724
+danni: added more dialogue, quizs, fixed all overworld bugs, pushing to develop noww\t2025-08-08 00:54:43 +1000\tKwazzi724
+sprite import\t2025-08-07 20:48:39 +1000\tKwazzi724
+Added tutorial popups\t2025-08-07 19:02:39 +1000\tJamie Hirvonen
+minor fixes\t2025-08-06 22:48:45 +1000\tKwazzi724
+folder management\t2025-08-06 22:39:48 +1000\tKwazzi724
+ui stuff n stuff\t2025-08-06 22:28:04 +1000\tKwazzi724
+added new/polished assets + motherboard, fixed dialogue bridging\t2025-08-06 02:19:10 +1000\tKwazzi724
+fixed all UI and minigame starting logic from jamie's merge\t2025-08-06 00:16:56 +1000\tKwazzi724
+Re-organized script folders\t2025-08-05 17:33:52 +1000\tJamie Hirvonen
+Merge branch 'jamie' into develop\t2025-08-05 17:29:19 +1000\tJamie Hirvonen
+Moved script files (thanks source control)\t2025-08-05 17:28:50 +1000\tJamie Hirvonen
+ Quick fixes\t2025-08-05 17:06:39 +1000\tJamie Hirvonen
+Revert "Merged main with jamie branch"\t2025-08-05 16:53:25 +1000\tJamie Hirvonen
+hopping byte! and y sorting fix\t2025-08-05 00:06:04 +1000\tKwazzi724
+Merged main with jamie branch\t2025-08-03 22:12:50 +1000\tJamie Hirvonen
+Added dialogue line typing, line skipping, and in process of adding inputs\t2025-08-01 16:42:19 +1000\tJamie Hirvonen
+in class fixes\t2025-08-01 15:06:15 +1000\tSAE1\1034231
+badge ui fix\t2025-08-01 12:16:47 +1000\tKwazzi724
+minigame base & ui integration\t2025-08-01 12:10:23 +1000\tKwazzi724
+integrated dialogue, set up badge, minigame controller etcc...exhaustion achieved\t2025-08-01 02:37:37 +1000\tKwazzi724
+Merge branch 'danni' into develop\t2025-07-31 23:07:01 +1000\tKwazzi724
+Merge branch 'jamie' into develop\t2025-07-31 23:05:07 +1000\tKwazzi724
+add ink.asset\t2025-07-31 23:03:18 +1000\tKwazzi724
+null fix:3\t2025-07-31 22:58:38 +1000\tKwazzi724
+some scene set up\t2025-07-31 22:26:01 +1000\tKwazzi724
+Dialogue System Ready for merge (kinda?)\t2025-07-31 21:55:12 +1000\tJamie Hirvonen
+Working on finishing dialogue system\t2025-07-31 10:18:12 +1000\tJamie Hirvonen
+persistent managers for npc talked to and different player spawns; made badge manager which still needs to be hooked up\t2025-07-30 01:09:43 +1000\tKwazzi724
+fixed byte stacking & dragging issue\t2025-07-29 23:44:20 +1000\tKwazzi724
+config fix\t2025-07-27 02:11:15 +1000\tKwazzi724
+FIXED CPU GAME omgggg. and interactable signposts!\t2025-07-25 13:37:43 +1000\tKwazzi724
+motherboard and player\t2025-07-25 03:05:57 +1000\tKwazzi724
+Issues from previous commit FINALLY fixed\t2025-07-25 00:39:15 +1000\tJamie Hirvonen
+Working on dialogue system\t2025-07-24 18:09:50 +1000\tJamie Hirvonen
+Started dialogue system\t2025-07-21 00:34:41 +1000\tJamie Hirvonen
+fixxxxxed omg, verification loop now stable\t2025-07-18 11:44:17 +1000\tKwazzi724
+cpu game working with issues (w ram identity)\t2025-07-18 00:55:42 +1000\tKwazzi724
+player gameplay functionalities, collision events, gameplay basically done now\t2025-07-17 22:14:26 +1000\tKwazzi724
+finished making a hopping npc, snows and collision counter\t2025-07-08 18:38:48 +1000\tKwazzi724
+packages imported, folders set up :D\t2025-07-07 19:21:48 +1000\tKwazzi724
+Project files\t2025-07-07 19:15:42 +1000\tKwazzi724
+Initial commit\t2025-07-07 19:03:33 +1000\tDanni-Li724
