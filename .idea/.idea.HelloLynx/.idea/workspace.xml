@@ -8,10 +8,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloLynx/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.ink" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/InkDialogue/MainDialogue.json" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueSystem/Prefabs/DialogueSystem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameScripts/InteractableDialogue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mikey.unity" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/PixelFonts/Born2bSportyFS SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/PixelFonts/Born2bSportyFS SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Misc/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Misc/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Motherboard/LynxVideos.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Motherboard/LynxVideos.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Motherboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+>>>>>>> origin/nick
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +134,11 @@
       <workItem from="1755254496916" duration="4290000" />
       <workItem from="1755265724193" duration="2679000" />
       <workItem from="1755308187493" duration="8299000" />
+<<<<<<< HEAD
       <workItem from="1755339788747" duration="2504000" />
+=======
+      <workItem from="1755432479228" duration="107000" />
+>>>>>>> origin/nick
     </task>
     <servers />
   </component>

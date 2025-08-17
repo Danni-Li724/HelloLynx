@@ -5346,13 +5346,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.3764114, y: 9.202608}
+    - - {x: -2.4329405, y: 11.617529}
       - {x: -8.702738, y: 8.06732}
       - {x: -5.1341877, y: 3.9896488}
       - {x: -0.8282547, y: -0.6153183}
       - {x: 2.2917948, y: -1.1411924}
       - {x: 9.340593, y: -1.1184216}
-      - {x: 11.441993, y: 1.8191891}
+      - {x: 13.10225, y: 2.8757172}
   m_UseDelaunayMesh: 0
 --- !u!114 &798009404
 MonoBehaviour:
@@ -12440,7 +12440,7 @@ MonoBehaviour:
   playerTag: Player
   updateContinuously: 1
   vcam: {fileID: 1689897127}
-  zoomSpeed: 200
+  zoomSpeed: 300
   minSize: 20
   maxSize: 80
 --- !u!1 &1737461802

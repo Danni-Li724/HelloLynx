@@ -213,6 +213,7 @@ EXTERNAL AwardPowerBadge()
 === ramTrivia ===
         = Introduction
             This is the Lynx's main RAM, which contains 64 kilobytes of fast access memory. # speaker: Narrator
+            64k...that sounds like a lot, right? But wait, modern computers have 32,000,000 KB! # speaker: Narrator
             Everything: game code, graphics, sound...must fit into this space at runtime. # speaker: Narrator
             It’s not much, but used cleverly, it’s enough to run entire worlds. # speaker: Narrator
             Want to test your memory on memory? # speaker: Narrator
