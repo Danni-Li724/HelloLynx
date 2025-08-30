@@ -146,15 +146,15 @@ RectTransform:
   m_GameObject: {fileID: 27699867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.55, y: 0.55, z: 1}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1685167009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 33}
-  m_SizeDelta: {x: 1536, y: 1024}
+  m_AnchoredPosition: {x: -0.0040348, y: -4.1199}
+  m_SizeDelta: {x: 1538.4, y: 881.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27699869
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3a9ab4d3c52f344f94a780c9e240303, type: 3}
+  m_Sprite: {fileID: 7750947355628750488, guid: c6a5cca90e830204da9ee922c46cf10f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -221,14 +221,14 @@ RectTransform:
   m_GameObject: {fileID: 43436259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.28, y: 0.28, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1685167009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: -46.1}
+  m_AnchoredPosition: {x: -219, y: -29}
   m_SizeDelta: {x: 2048, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43436261
@@ -5941,13 +5941,8 @@ MonoBehaviour:
   minigameUIPanel: {fileID: 1527258957}
   minigameGameplay: {fileID: 53706891}
   startButtonObj: {fileID: 652875779}
-<<<<<<< HEAD
-  tryAgainButtonObj: {fileID: 1738229340}
-  returnButtonObj: {fileID: 1992896803}
-=======
   tryAgainButtonObj: {fileID: 320362588}
   returnButtonObj: {fileID: 2106018618}
->>>>>>> origin/nick
   returnButtonObj2: {fileID: 436570481}
   resultText: {fileID: 1885671581}
   popButton: {fileID: 759926071}
