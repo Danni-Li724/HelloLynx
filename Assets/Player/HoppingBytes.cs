@@ -83,7 +83,7 @@ public class HoppingBytes : AutomaticMovement
         if (tempText != null)
         {
             tempText.text = text;
-            Debug.Log("set to" + text);
+            // Debug.Log("set to" + text);
         }
         
         Sequence popupSeq = DOTween.Sequence();

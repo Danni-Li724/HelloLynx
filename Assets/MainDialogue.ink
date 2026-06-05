@@ -180,7 +180,7 @@ EXTERNAL AwardPowerBadge()
             + [> I need more time...] # speaker: Player
                 No stress, come back whenever you're ready. # speaker : Mikey
                 ~ ExitDialogue()
-                - > DONE
+                -> DONE
                 
 === screenTrivia ===
         = Introduction
